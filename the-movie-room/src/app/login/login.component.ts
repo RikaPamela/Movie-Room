@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/services/auth.service';
+import { User } from '../interface/User';
+import { TokenStorageService } from 'src/services/token-storage.service';
 
 @Component({
   selector: 'app-login',
@@ -9,31 +11,46 @@ import { AuthService } from 'src/services/auth.service';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
-  userName: string ='';
-  password: string ='';
-  formData!: FormGroup;
 
-  constructor(private authService : AuthService, private router : Router) { }
+  form: any = {
+    username: null,
+    password: null
+  };
+  isLoggedIn = false;
+  isLoginFailed = false;
+  errorMessage = '';
+  roles: string[] = [];
 
-  ngOnInit() {
-     this.formData = new FormGroup({
-        userName: new FormControl("admin"),
-        password: new FormControl("admin"),
-     });
+  constructor(private authService: AuthService, private tokenStorage: TokenStorageService) { }
+
+  ngOnInit(): void {
+    if (this.tokenStorage.getToken()) {
+      this.isLoggedIn = true;
+      this.roles = this.tokenStorage.getUser().roles;
+    }
   }
 
-  onClickSubmit(data: any) {
-     this.userName = data.userName;
-     this.password = data.password;
+  onSubmit(): void {
+    const { username, password } = this.form;
 
-     console.log("Login page: " + this.userName);
-     console.log("Login page: " + this.password);
+    this.authService.login(username, password).subscribe({
+      next: (data) => {
+        this.tokenStorage.saveToken(data.accessToken);
+        this.tokenStorage.saveUser(data);
 
-     this.authService.login(this.userName, this.password)
-        .subscribe( data => { 
-           console.log("Is Login Success: " + data); 
-     
-          if(data) this.router.navigate(['login']); 
-     });
+        this.isLoginFailed = false;
+        this.isLoggedIn = true;
+        this.roles = this.tokenStorage.getUser().roles;
+        this.reloadPage();
+      },
+      error: (err) => {
+        this.errorMessage = err.error.message;
+        this.isLoginFailed = true;
+      }
+   });
+  }
+
+  reloadPage(): void {
+    window.location.reload();
   }
 }

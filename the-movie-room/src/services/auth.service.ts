@@ -1,25 +1,31 @@
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from 'environment';
 import { Observable, of, delay, tap } from 'rxjs';
+
+const httpOptions = {
+  headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+};
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
+  
+  constructor(private http: HttpClient) { }
 
-  constructor() { }
-  isUserLoggedIn: boolean = false;
+  login(username: string, password: string): Observable<any> {
+    return this.http.post(environment.URL + 'signin', {
+      username,
+      password
+    }, httpOptions);
+  }
 
-   login(userName: string, password: string): Observable<any> {
-      console.log(userName);
-      console.log(password);
-      this.isUserLoggedIn = userName == 'admin' && password == 'admin';
-      localStorage.setItem('isUserLoggedIn', this.isUserLoggedIn ? "true" : "false");
-
-      return of(this.isUserLoggedIn).pipe(
-         delay(1000),
-         tap(val => {
-            console.log("Is User Authentication is successful: " + val);
-         })
-      );
-   }
+  register(username: string, email: string, password: string): Observable<any> {
+    return this.http.post(environment.URL + 'signup', {
+      username,
+      email,
+      password
+    }, httpOptions);
+  }
 }
