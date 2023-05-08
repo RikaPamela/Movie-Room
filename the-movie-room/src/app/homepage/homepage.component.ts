@@ -6,5 +6,170 @@ import { Component } from '@angular/core';
   styleUrls: ['./homepage.component.scss']
 })
 export class HomepageComponent {
+  products= [
+    {
+      name:"hasdvkkadyvvykda",
+      subTitle:"fuytfutyjftyjtfy",
+      ratings : 67,
+    },
+    {
+      name:"hasdvkkadyvvykda",
+      subTitle:"fuytfutyjftyjtfy",
+      ratings : 67,
+    },
+    {
+      name:"hasdvkkadyvvykda",
+      subTitle:"fuytfutyjftyjtfy",
+      ratings : 67,
+    },
+    {
+      name:"hasdvkkadyvvykda",
+      subTitle:"fuytfutyjftyjtfy",
+      ratings : 67,
+    },
+    {
+      name:"hasdvkkadyvvykda",
+      subTitle:"fuytfutyjftyjtfy",
+      ratings : 67,
+    },
+    {
+      name:"hasdvkkadyvvykda",
+      subTitle:"fuytfutyjftyjtfy",
+      ratings : 67,
+    },
+    {
+      name:"hasdvkkadyvvykda",
+      subTitle:"fuytfutyjftyjtfy",
+      ratings : 67,
+    },
+    {
+      name:"hasdvkkadyvvykda",
+      subTitle:"fuytfutyjftyjtfy",
+      ratings : 67,
+    },
+    {
+      name:"hasdvkkadyvvykda",
+      subTitle:"fuytfutyjftyjtfy",
+      ratings : 67,
+    },
+    {
+      name:"hasdvkkadyvvykda",
+      subTitle:"fuytfutyjftyjtfy",
+      ratings : 67,
+    },
+    {
+      name:"hasdvkkadyvvykda",
+      subTitle:"fuytfutyjftyjtfy",
+      ratings : 67,
+    },
+    {
+      name:"hasdvkkadyvvykda",
+      subTitle:"fuytfutyjftyjtfy",
+      ratings : 67,
+    },
+    {
+      name:"hasdvkkadyvvykda",
+      subTitle:"fuytfutyjftyjtfy",
+      ratings : 67,
+    },
+    {
+      name:"hasdvkkadyvvykda",
+      subTitle:"fuytfutyjftyjtfy",
+      ratings : 67,
+    },
+    {
+      name:"hasdvkkadyvvykda",
+      subTitle:"fuytfutyjftyjtfy",
+      ratings : 67,
+    },
+    {
+      name:"hasdvkkadyvvykda",
+      subTitle:"fuytfutyjftyjtfy",
+      ratings : 67,
+    },
+    {
+      name:"hasdvkkadyvvykda",
+      subTitle:"fuytfutyjftyjtfy",
+      ratings : 67,
+    },
+    {
+      name:"hasdvkkadyvvykda",
+      subTitle:"fuytfutyjftyjtfy",
+      ratings : 67,
+    },
+    {
+      name:"hasdvkkadyvvykda",
+      subTitle:"fuytfutyjftyjtfy",
+      ratings : 67,
+    },
+    {
+      name:"hasdvkkadyvvykda",
+      subTitle:"fuytfutyjftyjtfy",
+      ratings : 67,
+    },
+    {
+      name:"hasdvkkadyvvykda",
+      subTitle:"fuytfutyjftyjtfy",
+      ratings : 67,
+    },
+    {
+      name:"hasdvkkadyvvykda",
+      subTitle:"fuytfutyjftyjtfy",
+      ratings : 67,
+    },
+    {
+      name:"hasdvkkadyvvykda",
+      subTitle:"fuytfutyjftyjtfy",
+      ratings : 67,
+    },
+    {
+      name:"hasdvkkadyvvykda",
+      subTitle:"fuytfutyjftyjtfy",
+      ratings : 67,
+    },
+    {
+      name:"hasdvkkadyvvykda",
+      subTitle:"fuytfutyjftyjtfy",
+      ratings : 67,
+    },
+    {
+      name:"hasdvkkadyvvykda",
+      subTitle:"fuytfutyjftyjtfy",
+      ratings : 67,
+    },
+    {
+      name:"hasdvkkadyvvykda",
+      subTitle:"fuytfutyjftyjtfy",
+      ratings : 67,
+    },
+    {
+      name:"hasdvkkadyvvykda",
+      subTitle:"fuytfutyjftyjtfy",
+      ratings : 67,
+    },
+    {
+      name:"hasdvkkadyvvykda",
+      subTitle:"fuytfutyjftyjtfy",
+      ratings : 67,
+    },
+    {
+      name:"hasdvkkadyvvykda",
+      subTitle:"fuytfutyjftyjtfy",
+      ratings : 67,
+    },
+    {
+      name:"hasdvkkadyvvykda",
+      subTitle:"fuytfutyjftyjtfy",
+      ratings : 67,
+    },
+    {
+      name:"hasdvkkadyvvykda",
+      subTitle:"fuytfutyjftyjtfy",
+      ratings : 67,
+    },
+  ]
+
+  product:any;
+
 
 }
