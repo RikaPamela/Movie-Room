@@ -13,7 +13,7 @@ export class ReactiveFormComponent implements OnInit {
 
   // registerForm: FormGroup
   registerForm = new FormGroup({
-    name: new FormControl(''),
+    
     email: new FormControl(''),
     username: new FormControl(''),
     password: new FormControl(''),
@@ -30,7 +30,6 @@ export class ReactiveFormComponent implements OnInit {
 
   ngOnInit() {
     this.registerForm = this.fb.group({
-      name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       username: ['', [Validators.required], this.customValidator.userNameValidator.bind(this.customValidator)],
       password: ['', Validators.compose([Validators.required, this.customValidator.patternValidator()])],
