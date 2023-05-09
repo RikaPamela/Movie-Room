@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./homepage.component.scss']
 })
 export class HomepageComponent {
-  products= [
+  products = [
     {
       name:"hasdvkkadyvvykda",
       subTitle:"fuytfutyjftyjtfy",
@@ -167,9 +167,7 @@ export class HomepageComponent {
       subTitle:"fuytfutyjftyjtfy",
       ratings : 67,
     },
-  ]
-
-  product:any;
-
-
+    
+   ]
+   product:any;
 }

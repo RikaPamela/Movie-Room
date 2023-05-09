@@ -10,6 +10,7 @@ import { HeaderComponent } from './header/header.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ProductCardComponent } from './product-card/product-card.component';
 import { FormsModule } from '@angular/forms';
+import { WatchButtonComponent } from './watch-button/watch-button.component';
 
 
 
@@ -22,6 +23,7 @@ import { FormsModule } from '@angular/forms';
     HeaderComponent,
     ProfileComponent,
     ProductCardComponent,
+    WatchButtonComponent,
    
    
   ],
