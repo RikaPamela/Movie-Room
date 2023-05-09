@@ -9,7 +9,7 @@ import {
 import { Observable } from 'rxjs';
 import { TokenStorageService } from 'src/services/token-storage.service';
 
-const TOKEN_HEADER_KEY = 'Authorization';  
+const TOKEN_HEADER_KEY = 'x-access-token';  
 @Injectable()
 export class AuthInterceptor implements HttpInterceptor {
 
