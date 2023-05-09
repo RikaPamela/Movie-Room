@@ -1,16 +1,20 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component';
+//import { RegisterComponent } from './register/register.component';
 import { HeaderComponent } from './header/header.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ProductCardComponent } from './product-card/product-card.component';
-import { FormsModule } from '@angular/forms';
+//import { FormsModule } from '@angular/forms';
 import { WatchButtonComponent } from './watch-button/watch-button.component';
+import { ReactiveFormComponent } from './Register_component/reactive-form/reactive-form.component';
+import {HttpClientModule} from '@angular/common/http';
+import { BoardAdminComponent } from './board-admin/board-admin.component';
+
 
 
 
@@ -19,18 +23,23 @@ import { WatchButtonComponent } from './watch-button/watch-button.component';
     AppComponent,
     HomepageComponent,
     LoginComponent,
-    RegisterComponent,
+    //RegisterComponent,
     HeaderComponent,
     ProfileComponent,
     ProductCardComponent,
     WatchButtonComponent,
+    ReactiveFormComponent,
+    BoardAdminComponent
+
    
    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

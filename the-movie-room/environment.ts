@@ -1,0 +1,9 @@
+export const environment =
+{
+    URL_USER :"http://localhost:8081/",
+    //URL: 'https://dummyjson.com/auth/login',
+    JWT: "",
+    TOKEN_KEY: 'auth-token',
+    USER_KEY: 'auth-user',
+    TOKEN_HEADER_KEY :'Authorization'
+}

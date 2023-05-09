@@ -1,0 +1,25 @@
+:root {
+    --GREY50: #e7e7e7;
+    --GREEN50: #6fb554;
+    --WHITE: #ffffff;
+    --GRADIENTCOLOR:
+}
+
+.login-page {
+    width: 30rem;
+    height: 30rem;
+    background-color: var(--WHITE);
+    position: relative;
+    left: 30%;
+    margin-top: 15rem;
+    justify-content: end;
+}
+
+// .login-page form{
+//     border: none;
+// 	border-radius: 0;
+// 	outline: none;
+//     -webkit-appearance: none;
+// 	-moz-appearance: none;
+// 	appearance: none;
+// }
