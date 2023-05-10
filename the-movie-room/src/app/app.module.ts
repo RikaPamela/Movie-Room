@@ -12,7 +12,7 @@ import { ProductCardComponent } from './product-card/product-card.component';
 //import { FormsModule } from '@angular/forms';
 import { WatchButtonComponent } from './watch-button/watch-button.component';
 import { ReactiveFormComponent } from './Register_component/reactive-form/reactive-form.component';
-import {HttpClientModule} from '@angular/common/http';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
 import { BoardAdminComponent } from './board-admin/board-admin.component';
 
 
@@ -39,7 +39,8 @@ import { BoardAdminComponent } from './board-admin/board-admin.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
