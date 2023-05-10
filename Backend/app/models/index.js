@@ -10,4 +10,7 @@ db.role = require("./role.model");
 
 db.ROLES = ["user", "admin", "moderator"];
 
+//movies App
+db.movies = require("./movie.model.js")(mongoose);
+
 module.exports = db;
