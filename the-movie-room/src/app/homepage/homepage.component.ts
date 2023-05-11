@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ProductService } from '../Services/product.service';
+import { Movie } from '../types/data-types';
 
 @Component({
   selector: 'app-homepage',
@@ -6,168 +8,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./homepage.component.scss']
 })
 export class HomepageComponent {
-  products = [
-    {
-      name:"hasdvkkadyvvykda",
-      subTitle:"fuytfutyjftyjtfy",
-      ratings : 67,
-    },
-    {
-      name:"hasdvkkadyvvykda",
-      subTitle:"fuytfutyjftyjtfy",
-      ratings : 67,
-    },
-    {
-      name:"hasdvkkadyvvykda",
-      subTitle:"fuytfutyjftyjtfy",
-      ratings : 67,
-    },
-    {
-      name:"hasdvkkadyvvykda",
-      subTitle:"fuytfutyjftyjtfy",
-      ratings : 67,
-    },
-    {
-      name:"hasdvkkadyvvykda",
-      subTitle:"fuytfutyjftyjtfy",
-      ratings : 67,
-    },
-    {
-      name:"hasdvkkadyvvykda",
-      subTitle:"fuytfutyjftyjtfy",
-      ratings : 67,
-    },
-    {
-      name:"hasdvkkadyvvykda",
-      subTitle:"fuytfutyjftyjtfy",
-      ratings : 67,
-    },
-    {
-      name:"hasdvkkadyvvykda",
-      subTitle:"fuytfutyjftyjtfy",
-      ratings : 67,
-    },
-    {
-      name:"hasdvkkadyvvykda",
-      subTitle:"fuytfutyjftyjtfy",
-      ratings : 67,
-    },
-    {
-      name:"hasdvkkadyvvykda",
-      subTitle:"fuytfutyjftyjtfy",
-      ratings : 67,
-    },
-    {
-      name:"hasdvkkadyvvykda",
-      subTitle:"fuytfutyjftyjtfy",
-      ratings : 67,
-    },
-    {
-      name:"hasdvkkadyvvykda",
-      subTitle:"fuytfutyjftyjtfy",
-      ratings : 67,
-    },
-    {
-      name:"hasdvkkadyvvykda",
-      subTitle:"fuytfutyjftyjtfy",
-      ratings : 67,
-    },
-    {
-      name:"hasdvkkadyvvykda",
-      subTitle:"fuytfutyjftyjtfy",
-      ratings : 67,
-    },
-    {
-      name:"hasdvkkadyvvykda",
-      subTitle:"fuytfutyjftyjtfy",
-      ratings : 67,
-    },
-    {
-      name:"hasdvkkadyvvykda",
-      subTitle:"fuytfutyjftyjtfy",
-      ratings : 67,
-    },
-    {
-      name:"hasdvkkadyvvykda",
-      subTitle:"fuytfutyjftyjtfy",
-      ratings : 67,
-    },
-    {
-      name:"hasdvkkadyvvykda",
-      subTitle:"fuytfutyjftyjtfy",
-      ratings : 67,
-    },
-    {
-      name:"hasdvkkadyvvykda",
-      subTitle:"fuytfutyjftyjtfy",
-      ratings : 67,
-    },
-    {
-      name:"hasdvkkadyvvykda",
-      subTitle:"fuytfutyjftyjtfy",
-      ratings : 67,
-    },
-    {
-      name:"hasdvkkadyvvykda",
-      subTitle:"fuytfutyjftyjtfy",
-      ratings : 67,
-    },
-    {
-      name:"hasdvkkadyvvykda",
-      subTitle:"fuytfutyjftyjtfy",
-      ratings : 67,
-    },
-    {
-      name:"hasdvkkadyvvykda",
-      subTitle:"fuytfutyjftyjtfy",
-      ratings : 67,
-    },
-    {
-      name:"hasdvkkadyvvykda",
-      subTitle:"fuytfutyjftyjtfy",
-      ratings : 67,
-    },
-    {
-      name:"hasdvkkadyvvykda",
-      subTitle:"fuytfutyjftyjtfy",
-      ratings : 67,
-    },
-    {
-      name:"hasdvkkadyvvykda",
-      subTitle:"fuytfutyjftyjtfy",
-      ratings : 67,
-    },
-    {
-      name:"hasdvkkadyvvykda",
-      subTitle:"fuytfutyjftyjtfy",
-      ratings : 67,
-    },
-    {
-      name:"hasdvkkadyvvykda",
-      subTitle:"fuytfutyjftyjtfy",
-      ratings : 67,
-    },
-    {
-      name:"hasdvkkadyvvykda",
-      subTitle:"fuytfutyjftyjtfy",
-      ratings : 67,
-    },
-    {
-      name:"hasdvkkadyvvykda",
-      subTitle:"fuytfutyjftyjtfy",
-      ratings : 67,
-    },
-    {
-      name:"hasdvkkadyvvykda",
-      subTitle:"fuytfutyjftyjtfy",
-      ratings : 67,
-    },
-    {
-      name:"hasdvkkadyvvykda",
-      subTitle:"fuytfutyjftyjtfy",
-      ratings : 67,
-    },
-    
-   ]
-   product:any;
+  movie: Movie[]= [];
+
+  constructor(public productService: ProductService) {}
+
+  ngOnInit() {
+    this.getAllProducts();
+  }
+
+  getAllProducts(): void {
+    this.productService.getAll().subscribe((data) => {
+      this.movie = data;
+      console.log(this.movie);
+
+    });
+  }
 }

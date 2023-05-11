@@ -1,6 +1,6 @@
 // request
 export interface MovieRequest {
-    products: movie[];
+    movies: Movie[];
     total: number;
     skip: number;
     limit: number;
@@ -8,7 +8,7 @@ export interface MovieRequest {
 
 
 
-export interface movie{
+export interface Movie{
     title: String,
     description: String,
     genre: String,
