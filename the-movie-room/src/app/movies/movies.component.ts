@@ -19,12 +19,22 @@ export class MoviesComponent implements OnInit {
     this.retrieveMovies();
   }
 
+  //for the card - single watch
+  getMovie() {
+    if (this.movies) {
+      this.movieService.get(this.movies?.id);
+    }
+  }
+
+
+
   retrieveMovies(): void {
     this.movieService.getAll()
+
       .subscribe(
         data => {
           this.movies = data;
-          console.log(data);
+          // console.log(data);
         },
         error => {
           console.log(error);
