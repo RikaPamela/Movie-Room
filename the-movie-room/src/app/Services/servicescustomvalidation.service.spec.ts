@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { ServicescustomvalidationService } from './servicescustomvalidation.service';
+import { CustomvalidationService } from './servicescustomvalidation.service';
 
 describe('ServicescustomvalidationService', () => {
-  let service: ServicescustomvalidationService;
+  let service: CustomvalidationService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(ServicescustomvalidationService);
+    service = TestBed.inject(CustomvalidationService);
   });
 
   it('should be created', () => {

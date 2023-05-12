@@ -45,10 +45,12 @@ export class ProductService {
 
   constructor(private http: HttpClient) { }
 
+  //getting All Movies
   getAll(): Observable<any> {
     return this.http.get(`${this.baseUrl}/movies`);
   }
-
+  
+  //getting movie by id
   get(id: any): Observable<any> {
     return this.http.get(`${this.baseUrl}/movies/${id}`);
   }

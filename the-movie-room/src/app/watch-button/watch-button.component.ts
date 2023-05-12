@@ -1,4 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ProductService } from '../Services/product.service';
+import { Movie } from '../types/data-types';
+import { Observable } from 'rxjs';
+import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
 //youb have to import the cart services and function
 
 @Component({
@@ -6,28 +11,37 @@ import { Component } from '@angular/core';
   templateUrl: './watch-button.component.html',
   styleUrls: ['./watch-button.component.scss']
 })
-export class WatchButtonComponent {
+export class WatchButtonComponent implements OnInit{
+  
+  movie: Movie | undefined
 
+  constructor(
+    private route: ActivatedRoute,
+    private productService: ProductService,
+    private location: Location
+    ){}
+  
+  ngOnInit(): void {
+    this.get_Movie();
+  }
+
+  
+   get_Movie(): void {
+    const id = (this.route.snapshot.paramMap.get('id'));
+    console.log("this is an id :",id)
+    this.productService.get(id)
+      .subscribe((movie:any) =>{
+        console.log(movie)
+        this.movie = movie;
+      } );
+  }
+   
+  
+
+
+  
+  
   
 }
 
-// import { Component, Input } from '@angular/core';
-// import { CartService } from 'src/app/services/cart.service';
-// import { Product } from 'src/app/types/data-type';
 
-// @Component({
-//   selector: 'app-cart-item',
-//   templateUrl: './cart-item.component.html',
-//   styleUrls: ['./cart-item.component.scss'],
-// })
-// export class CartItemComponent {
-//   @Input() product?: Product;
-
-//   constructor(public cartService: CartService) {}
-
-//   removeFromCard() {
-//     if (this.product) {
-//       this.cartService.removeFromCard(this.product?.id);
-//     }
-//   }
-// }

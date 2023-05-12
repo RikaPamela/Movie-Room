@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../Services/product.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-movies',
@@ -13,28 +14,30 @@ export class MoviesComponent implements OnInit {
   currentIndex = -1;
   title = '';
 
-  constructor(private movieService: ProductService) { }
+  constructor(private movieService: ProductService , private router:Router) { }
 
   ngOnInit(): void {
     this.retrieveMovies();
   }
 
-  //for the card - single watch
+  
   getMovie() {
     if (this.movies) {
       this.movieService.get(this.movies?.id);
     }
   }
 
+ //retrieve a single movie by index when the button watch is clicked
+  gotoM(index){
+   return this.router.navigate(["watch-button",this.movies[index]._id])
+  }
 
 
   retrieveMovies(): void {
-    this.movieService.getAll()
-
-      .subscribe(
+    this.movieService.getAll().subscribe(
         data => {
           this.movies = data;
-          // console.log(data);
+          console.log(data);
         },
         error => {
           console.log(error);

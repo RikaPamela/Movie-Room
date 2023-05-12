@@ -1,12 +1,23 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light" >
-    <a class="navbar-brand" href="#">MovieRoom 📺</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<nav class="navbar navbar-expand-lg" >
+  <!-- 📺 -->
+    <img src="https://i.pinimg.com/736x/aa/f7/05/aaf705e06726ce3881288ae4be3ac5fe.jpg" alt="">
+
+    <a class="navbar-brand" routerLink="/home"> Movie<span class="brand-color">room</span></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" >
       <span class="navbar-toggler-icon"></span>
     </button>
-  
+
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        
+      <ul class="navbar-nav ml-auto">
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="#" style="color: orange;">Popular</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" style="color: orange;">Genres</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" style="color: orange;">Upcoming</a>
+        </li> -->
         <li class="nav-item dropdown">
           <!--<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
             Dropdown
@@ -18,27 +29,26 @@
             <a class="dropdown-item" href="#">Something else here</a>
           </div>-->
         </li>
-        
+
       </ul>
       <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button button type="button" class="btn btn-primary" routerLink="/login">
+        <button button type="button" class="btn btn-color" routerLink="/login">
             Account  <!--Profile Icon Within the A button-->
         </button>
+
+        <i class="fa fa-user-o"></i> 
+        <input class="form-control mr-sm-2" type="search" placeholder="Search by movie title" aria-label="Search">
+
       </form>
     </div>
-  </nav>
+</nav>
 
  
 
   
 
 
-<!---
-<nav class="navbar navbar-light bg-light" style="font-size: small;">
-  <a class="navbar-brand">Latest Release</a>
-</nav>
--->
+
 
   
 

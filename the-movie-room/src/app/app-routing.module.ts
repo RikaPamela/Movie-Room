@@ -17,7 +17,7 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'register', component: ReactiveFormComponent},
   {path: 'profile', component: ProfileComponent},
-  {path: 'watch-button', component: WatchButtonComponent}
+  {path: 'watch-button/:id', component: WatchButtonComponent}
 
 ];
 

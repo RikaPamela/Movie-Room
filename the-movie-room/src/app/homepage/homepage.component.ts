@@ -13,14 +13,14 @@ export class HomepageComponent {
   constructor(public productService: ProductService) {}
 
   ngOnInit() {
-    this.getAllProducts();
+    // this.getAllProducts();
   }
 
-  getAllProducts(): void {
-    this.productService.getAll().subscribe((data) => {
-      this.movie = data;
-      console.log(this.movie);
+  // getAllProducts(): void {
+  //   this.productService.getAll().subscribe((data) => {
+  //     this.movie = data;
+  //     console.log(this.movie);
 
-    });
-  }
+  //   });
+  // }
 }

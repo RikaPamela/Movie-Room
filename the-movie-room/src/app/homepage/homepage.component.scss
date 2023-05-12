@@ -5,3 +5,33 @@
   background-color: rgb(211, 211, 211);
   padding: 10px;
 }
+
+//Homepage scss
+.jumbotron {
+    background-color: black;
+  }
+  
+  .container-fluid {
+    background-color: black;
+    color: white;
+  }
+  
+  .container {
+    color: white;
+  }
+  
+  .container h1 {
+    font-size: 55px;
+    font-weight: 400;
+  }
+  
+  .container p {
+    font-size: 20px;
+  }
+  .titles {
+    color: #BAFF39;
+  }
+  
+  .form-control {
+    width: 200px;
+  }

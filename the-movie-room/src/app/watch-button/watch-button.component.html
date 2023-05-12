@@ -1,4 +1,4 @@
-<div class="media">
+<!-- <div class="media">
     <img height="450" src="https://images.unsplash.com/photo-1534800011563-d064f00ff539?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2338&q=80" class="mr-3" alt="...">
     
     <div class="media-body">
@@ -11,21 +11,20 @@
       <button type="button" class="btn btn-outline-primary">Watch Later</button>
     
     </div>
-</div>
+</div> 
+ -->
 
-  
-<!--<app-product-card></app-product-card>-->
-<!-- <div
-  class="flex items-center gap-4 justify-between pl-1 pr-2 py-2 rounded-xl hover:bg-base-300 cursor-pointer"
-  (click)="removeFromCard()"
->
-  <img
-    [src]="product?.thumbnail"
-    class="w-12 h-12 object-cover rounded-full border-base-300 border-4"
-    alt=""
-  />
-  <div class="flex flex-col justify-end">
-    <div class="text-[0.6rem] text-right">{{ product?.title }}</div>
-    <div class="font-bold text-right">R{{ product?.price }}</div>
+
+
+<div *ngIf="movie">
+  <div class="media" >
+    <img class="card-img-top"  class="mr-3" [src]="movie.image_url" alt="{{ movie.title }}">
+    <div class="media-body">
+      <h5 for="card-title" font-size="10">{{ movie.title }}</h5>
+      <h6 class="card-text">{{ movie.description }}</h6>
+      <p class="card-genre">Genre: {{movie.genre}}</p>
+      <p class="card-duration">Duration: {{ movie.duration }} mins</p>
+      <p class="">Year: {{ movie.release_date }}</p>
+    </div>
   </div>
-</div> -->
+</div>

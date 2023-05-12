@@ -9,7 +9,7 @@ export interface MovieRequest {
 
 
 export interface Movie{
-    id: Number,
+    id: any,
     title: String,
     description: String,
     genre: String,
