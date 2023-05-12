@@ -20,11 +20,12 @@
   <div class="media" >
     <img class="card-img-top"  class="mr-3" [src]="movie.image_url" alt="{{ movie.title }}">
     <div class="media-body">
-      <h5 for="card-title" font-size="10">{{ movie.title }}</h5>
+      <h5 class="title" for="card-title" >{{ movie.title }}</h5>
       <h6 class="card-text">{{ movie.description }}</h6>
       <p class="card-genre">Genre: {{movie.genre}}</p>
       <p class="card-duration">Duration: {{ movie.duration }} mins</p>
-      <p class="">Year: {{ movie.release_date }}</p>
+      <p class="year">Year: {{ movie.release_date }}</p>
+      <button style="background-color: rgb(182, 255, 36); color: black;">Watch Later</button>
     </div>
   </div>
 </div>
