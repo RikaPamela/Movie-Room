@@ -1,7 +1,10 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { environment } from 'environment';
-import { Observable, of, delay, tap } from 'rxjs';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { Token } from '@angular/compiler';
+// import {Router} from '@angular/router'
+
+const AUTH_API = 'http://localhost:8080/api/auth/';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -11,21 +14,24 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class AuthService {
-  
+  _router: any;
+
   constructor(private http: HttpClient) { }
 
   login(username: string, password: string): Observable<any> {
-    return this.http.post(environment.URL_USER + 'signin', {
+    return this.http.post(AUTH_API + 'signin', {
       username,
       password
     }, httpOptions);
   }
 
   register(username: string, email: string, password: string): Observable<any> {
-    return this.http.post(environment.URL_USER + 'signup', {
+    return this.http.post(AUTH_API + 'signup', {
       username,
       email,
       password
     }, httpOptions);
   }
+
+  
 }

@@ -1,15 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-
 import { AuthService } from 'src/services/auth.service';
 
 
-
 @Component({
-  selector: 'app-reactive-form',
-  templateUrl: './reactive-form.component.html',
-  styleUrls: ['./reactive-form.component.scss']
+  selector: 'app-register',
+  templateUrl: './register.component.html',
+  styleUrls: ['./register.component.scss']
 })
-export class ReactiveFormComponent implements OnInit {
+export class RegisterComponent implements OnInit{
   form: any = {
     username: null,
     email: null,
@@ -28,7 +26,7 @@ export class ReactiveFormComponent implements OnInit {
     const { username, email, password } = this.form;
 
     this.authService.register(username, email, password).subscribe({
-      next:(data) => {
+      next: (data) => {
         console.log(data);
         this.isSuccessful = true;
         this.isSignUpFailed = false;
@@ -37,6 +35,6 @@ export class ReactiveFormComponent implements OnInit {
         this.errorMessage = err.error.message;
         this.isSignUpFailed = true;
       }
-  });
+    });
   }
 }

@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ReactiveFormComponent } from './reactive-form.component';
+import { RegisterComponent } from './register.component';
 
-describe('ReactiveFormComponent', () => {
-  let component: ReactiveFormComponent;
-  let fixture: ComponentFixture<ReactiveFormComponent>;
+describe('RegisterComponent', () => {
+  let component: RegisterComponent;
+  let fixture: ComponentFixture<RegisterComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ReactiveFormComponent ]
+      declarations: [ RegisterComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ReactiveFormComponent);
+    fixture = TestBed.createComponent(RegisterComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -21,3 +21,4 @@ describe('ReactiveFormComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+

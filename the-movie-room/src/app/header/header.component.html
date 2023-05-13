@@ -31,11 +31,22 @@
         </li>
 
       </ul>
+      <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
+        <li class="nav-item" id="flex-icon">
+          <a href="/profile" class="nav-link" routerLink="profile"></a>
+        </li>
+        <li class="nav-item">
+          <a href class="nav-link" (click)="logout()">Log Out</a>
+        </li>
+      </ul>
+      
       <form class="form-inline my-2 my-lg-0">
-        <button button type="button" class="btn btn-color" routerLink="/login">
+        
+        <button button type="button"  class="btn btn-color" routerLink="/login">
+          
+         
             Account  <!--Profile Icon Within the A button-->
         </button>
-
         <i class="fa fa-user-o"></i> 
         <input class="form-control mr-sm-2" type="search" placeholder="Search by movie title" aria-label="Search">
 

@@ -6,8 +6,9 @@ import { LoginComponent } from './login/login.component';
 import { ProfileComponent } from './profile/profile.component';
 import { WatchButtonComponent } from './watch-button/watch-button.component';
 //import { ProductComponent } from './product-card/product-card.component';
-import { ReactiveFormComponent } from './Register_component/reactive-form/reactive-form.component';
+// import { ReactiveFormComponent } from './Register_component/reactive-form/reactive-form.component';
 import { MoviesComponent } from './movies/movies.component';
+import { RegisterComponent } from './register/register.component';
 
 const routes: Routes = [
  
@@ -15,7 +16,8 @@ const routes: Routes = [
   {path: 'home', component: HomepageComponent},
   {path: 'movies', component: MoviesComponent},
   {path: 'login', component: LoginComponent},
-  {path: 'register', component: ReactiveFormComponent},
+  {path: 'register', component: RegisterComponent},
+
   {path: 'profile', component: ProfileComponent},
   {path: 'watch-button/:id', component: WatchButtonComponent}
 

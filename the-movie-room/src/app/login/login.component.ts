@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Component } from '@angular/core';
 import { AuthService } from 'src/services/auth.service';
-import { User } from '../interface/User';
 import { TokenStorageService } from 'src/services/token-storage.service';
+
+
+
 
 @Component({
   selector: 'app-login',
@@ -11,7 +11,6 @@ import { TokenStorageService } from 'src/services/token-storage.service';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
-
   form: any = {
     username: null,
     password: null
@@ -20,12 +19,14 @@ export class LoginComponent {
   isLoginFailed = false;
   errorMessage = '';
   roles: string[] = [];
+username: any;
 
   constructor(private authService: AuthService, private tokenStorage: TokenStorageService) { }
 
   ngOnInit(): void {
     if (this.tokenStorage.getToken()) {
       this.isLoggedIn = true;
+      
       this.roles = this.tokenStorage.getUser().roles;
     }
   }
@@ -42,6 +43,7 @@ export class LoginComponent {
         this.isLoggedIn = true;
         this.roles = this.tokenStorage.getUser().roles;
         this.reloadPage();
+        window.location.replace("/home")
       },
       error: (err) => {
         this.errorMessage = err.error.message;
