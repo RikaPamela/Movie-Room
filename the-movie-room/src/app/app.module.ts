@@ -19,15 +19,15 @@ import { BoardAdminComponent } from './board-admin/board-admin.component';
 import { MoviesComponent } from './movies/movies.component';
 import { BoardUserComponent } from './board-user/board-user.component';
 import { BoardModeratorComponent } from './board-moderator/board-moderator.component';
+import { FooterComponent } from './footer/footer.component';
 
 // import { RegisterComponent } from './register/register.component';
 // import { HttpClientModule } from '@angular/common/http';
 
 
 
-
 @NgModule({
-  declarations: [
+  declarations: [	
     AppComponent,
     HomepageComponent,
     LoginComponent,
@@ -42,11 +42,8 @@ import { BoardModeratorComponent } from './board-moderator/board-moderator.compo
     BoardUserComponent,
     BoardModeratorComponent,
     RegisterComponent,
-   
-
-   
-   
-  ],
+    FooterComponent,
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule,

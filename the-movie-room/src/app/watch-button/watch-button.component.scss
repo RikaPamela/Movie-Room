@@ -1,18 +1,24 @@
 .media{
-    background-color: #000000; 
+    background-color: white; 
+    height: 100%;
     /* color: rgb(255, 255, 255); */
-    // margin-top: 150px;
+    /* margin-top: 50px; */
 }
 
 .title{
     font-size: 50px;
-    color: rgb(170, 255, 0);
+    /* color: rgb(170, 255, 0); */
 }
 
+
+.card-img-top {
+    height: 250px;
+    width: 150px;
+}
 .card-text{
     font-size: 23px;
 }
-
+/* 
 .card-genre{
     font-size: 19px;
     color: rgb(170, 255, 0); 
@@ -21,7 +27,7 @@
 .year{
     font-size: 19px;
     color: rgb(170, 255, 0); 
-}
+} */
 
 
 

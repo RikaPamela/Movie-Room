@@ -9,11 +9,15 @@ export interface MovieRequest {
 
 
 export interface Movie{
-    id: any,
     title: String,
     description: String,
+    cast: String,
+    directors: String,
     genre: String,
     release_date: Number,
     duration: Number,
-    image_url: String, 
+    Ratings: Number,
+    youtube_url: String,
+    image_url: String,
+    background_url: String
 }

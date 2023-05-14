@@ -16,16 +16,21 @@
 
 
 
-<div *ngIf="movie">
-  <div class="media" >
-    <img class="card-img-top"  class="mr-3" [src]="movie.image_url" alt="{{ movie.title }}">
+<!-- <div *ngIf="movie"> -->
+  <div class="outer-div" >
+    <img class="card-img-top" class="watch-images"  class="mr-3" [src]="movie.image_url" alt="{{ movie.title }}">
     <div class="media-body">
       <h5 class="title" for="card-title" >{{ movie.title }}</h5>
       <h6 class="card-text">{{ movie.description }}</h6>
-      <p class="card-genre">Genre: {{movie.genre}}</p>
-      <p class="card-duration">Duration: {{ movie.duration }} mins</p>
-      <p class="year">Year: {{ movie.release_date }}</p>
+      <p class="card-genre">Genre {{movie.genre}}</p>
+      <p class="card-duration">Duration {{ movie.duration }} mins</p>
+      <p class="year">Director {{ movie.directors }}</p>
+      <p class="year">Ratings {{ movie.Ratings }}</p>
+      <p class="year">Trailer {{ movie.youtube_url }}</p>
+      <p class="year">Cast {{ movie.cast }}</p>
+
       <button style="background-color: rgb(182, 255, 36); color: black;">Watch Later</button>
     </div>
   </div>
-</div>
+<!-- </div> -->
+
