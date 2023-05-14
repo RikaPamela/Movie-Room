@@ -17,7 +17,7 @@
 
 
 <!-- <div *ngIf="movie"> -->
-  <div class="outer-div" >
+  <!-- <div class="outer-div" >
     <img class="card-img-top" class="watch-images"  class="mr-3" [src]="movie.image_url" alt="{{ movie.title }}">
     <div class="media-body">
       <h5 class="title" for="card-title" >{{ movie.title }}</h5>
@@ -31,6 +31,24 @@
 
       <button style="background-color: rgb(182, 255, 36); color: black;">Watch Later</button>
     </div>
-  </div>
-<!-- </div> -->
+</div> -->
 
+
+<div class="movie_card" id="bright">
+  <div class="info_section">
+    <div class="movie_header">
+      <img class="locandina" [src]="movie.image_url" alt="{{ movie.title }}"/>
+      <h1>{{ movie.title }}</h1>
+      <h4>{{movie.release_date}}</h4>
+      <span class="minutes">{{ movie.duration }} min</span>
+      <p class="type">{{movie.genre}}</p>
+    </div>
+    <div class="movie_desc">
+      <p class="text">
+        {{ movie.description }}
+      </p>
+    </div>
+    
+  </div>
+  <div class="blur_back bright_back"></div>
+</div>

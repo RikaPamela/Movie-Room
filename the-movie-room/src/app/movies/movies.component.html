@@ -4,7 +4,7 @@
     <div class="row">
       <div class="col-sm-3" *ngFor="let movie of movies ; let index = index">
         <div class="shadow-sm card mb-13">
-          <img class="card-img-top" [src]="movie.image_url" alt="{{ movie.title }}">
+          <img class="card-img-top" routerLink="/"  [src]="movie.image_url" alt="{{ movie.title }}">
           <div class="card-body">
             <h5 class="card-title title">{{ movie.title }}</h5>
             <p class="card-title genre">{{ movie.genre}}</p>
