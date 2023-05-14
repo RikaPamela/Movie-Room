@@ -6,6 +6,7 @@ module.exports = mongoose => {
         title: String,
         description: String,
         cast: String,
+        age_rating: String,
         Director: String,
         genre: String,
         release_date: Number,
