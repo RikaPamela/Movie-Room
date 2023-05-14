@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductService } from '../Services/product.service';
+import { ProductService } from '../services/product.service';
 import { Movie } from '../types/data-types';
 import { Observable } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';

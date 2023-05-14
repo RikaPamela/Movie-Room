@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg" >
   <!-- 📺 -->
-    <img src="https://i.pinimg.com/736x/aa/f7/05/aaf705e06726ce3881288ae4be3ac5fe.jpg" alt="">
+    <!-- <img src="https://i.pinimg.com/736x/aa/f7/05/aaf705e06726ce3881288ae4be3ac5fe.jpg" alt=""> -->
 
     <a class="navbar-brand" routerLink="/home"> Movie<span class="brand-color">room</span></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" >
@@ -31,27 +31,82 @@
         </li>
 
       </ul>
-      <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
+      <ul class="navbar-nav ml-auto text-white" *ngIf="isLoggedIn">
         <li class="nav-item" id="flex-icon">
           <a href="/profile" class="nav-link" routerLink="profile"></a>
         </li>
+
         <li class="nav-item">
           <a href class="nav-link" (click)="logout()">Log Out</a>
         </li>
+
       </ul>
       
       <form class="form-inline my-2 my-lg-0">
         
         <button button type="button"  class="btn btn-color" routerLink="/login">
-          
-         
-            Account  <!--Profile Icon Within the A button-->
+            Signup 
         </button>
         <i class="fa fa-user-o"></i> 
         <input class="form-control mr-sm-2" type="search" placeholder="Search by movie title" aria-label="Search">
 
       </form>
     </div>
+
+
+
+
+    <div class="flex-grow">
+      <ul class="flex justify-end items-center">
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="#" style="color: orange;">Popular</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" style="color: orange;">Genres</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" style="color: orange;">Upcoming</a>
+        </li> -->
+        <li class="relative">
+          <!--<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="Login"></a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>-->
+        </li>
+      </ul>
+    
+      <ul class="flex justify-end items-center" *ngIf="isLoggedIn">
+        <li class="flex items-center mr-4">
+          <a href="/profile" class="text-white hover:text-gray-300">
+            <i class="fa fa-user-o"></i>
+          </a>
+        </li>
+    
+        <li class="mr-4">
+          <a href class="text-white hover:text-gray-300" (click)="logout()">Log Out</a>
+        </li>
+    
+        <!-- <li class="nav-item">
+          <a href class="nav-link" (click)="logout()">Watch List</a>
+        </li> -->
+      </ul>
+    
+      <form class="flex justify-end items-center">
+        <button type="button" class="btn btn-color mr-2" routerLink="/login">
+          Signup
+        </button>
+        <i class="fa fa-user-o"></i>
+        <input class="form-input w-1/3 px-4 py-2 mr-4 rounded-lg shadow-md" type="search" placeholder="Search by movie title" aria-label="Search">
+
+      </form>
+    </div>
+    
+
 </nav>
 
  
