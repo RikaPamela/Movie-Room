@@ -29,7 +29,15 @@ export class HeaderComponent {
     }
   }
 
+  // login() {
+  //    // code to handle user login
+  //    this.isLoggedIn = true;
+  //   //  this.tokenStorageService.signIn();
+  //   window.location.reload();
+  // }
+
   logout(): void {
+    this.isLoggedIn = true;
     this.tokenStorageService.signOut();
     window.location.reload();
   }

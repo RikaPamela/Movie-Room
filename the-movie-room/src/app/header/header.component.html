@@ -2,13 +2,13 @@
   <!-- 📺 -->
     <!-- <img src="https://i.pinimg.com/736x/aa/f7/05/aaf705e06726ce3881288ae4be3ac5fe.jpg" alt=""> -->
 
-    <a class="navbar-brand" routerLink="/home"> Movie<span class="brand-color">room</span></a>
+    <a class="navbar-brand" routerLink="/home"> TheMovie<span class="brand-color">Room</span></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" >
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto">
+      <ul class="ml-auto navbar-nav">
         <!-- <li class="nav-item">
           <a class="nav-link" href="#" style="color: orange;">Popular</a>
         </li>
@@ -31,7 +31,7 @@
         </li>
 
       </ul>
-      <ul class="navbar-nav ml-auto text-white" *ngIf="isLoggedIn">
+      <ul class="ml-auto text-white navbar-nav" *ngIf="isLoggedIn">
         <li class="nav-item" id="flex-icon">
           <a href="/profile" class="nav-link" routerLink="profile"></a>
         </li>
@@ -42,7 +42,7 @@
 
       </ul>
       
-      <form class="form-inline my-2 my-lg-0">
+      <form class="my-2 form-inline my-lg-0">
         
         <button button type="button"  class="btn btn-color" routerLink="/login">
             Signup 
@@ -55,10 +55,12 @@
 
 
 
+   <!--Tailwind conversion of the above code-->
+   <!--DO NOT DELETE-->
 
     <div class="flex-grow">
-      <ul class="flex justify-end items-center">
-        <!-- <li class="nav-item">
+      <ul class="flex items-center justify-end">
+        <!--<li class="nav-item">
           <a class="nav-link" href="#" style="color: orange;">Popular</a>
         </li>
         <li class="nav-item">
@@ -80,7 +82,7 @@
         </li>
       </ul>
     
-      <ul class="flex justify-end items-center" *ngIf="isLoggedIn">
+      <ul class="flex items-center justify-end" *ngIf="isLoggedIn">
         <li class="flex items-center mr-4">
           <a href="/profile" class="text-white hover:text-gray-300">
             <i class="fa fa-user-o"></i>
@@ -90,18 +92,22 @@
         <li class="mr-4">
           <a href class="text-white hover:text-gray-300" (click)="logout()">Log Out</a>
         </li>
-    
+        
+        
         <!-- <li class="nav-item">
           <a href class="nav-link" (click)="logout()">Watch List</a>
         </li> -->
       </ul>
     
-      <form class="flex justify-end items-center">
-        <button type="button" class="btn btn-color mr-2" routerLink="/login">
-          Signup
+      <form class="flex items-center justify-end">
+        <button type="button" class="mr-2 btn btn-color" routerLink="/login">
+          Signin
         </button>
+        <!-- <button type="button" class="mr-2 btn btn-color" *ngIf="isLoggedIn" (click)="logout()">
+          Sign Out
+        </button> -->
         <i class="fa fa-user-o"></i>
-        <input class="form-input w-1/3 px-4 py-2 mr-4 rounded-lg shadow-md" type="search" placeholder="Search by movie title" aria-label="Search">
+        <input class="w-1/3 px-4 py-2 mr-4 rounded-lg shadow-md form-input" type="search" placeholder="Search by movie title" aria-label="Search">
 
       </form>
     </div>

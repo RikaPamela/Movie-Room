@@ -71,13 +71,13 @@
       </div>
     </div>
     <div class="form-group">
-      <button class="btn btn-primary btn-block">Sign Up</button>
+      <button class="btn btn-block">Sign Up</button>
     </div>
 
     <div class="alert alert-warning" *ngIf="f.submitted && isSignUpFailed">
       Signup failed!<br />{{ errorMessage }}
     </div>
-    <div class="text-center text-sm text-grey-dark mt-4">
+    <!-- <div class="text-center text-sm text-grey-dark mt-4">
       By signing up, you agree to the 
       <a class="no-underline border-b border-grey-dark text-grey-dark" href="#">
           Terms of Service
@@ -85,12 +85,12 @@
       <a class="no-underline border-b border-grey-dark text-grey-dark" href="#">
           Privacy Policy
       </a>
-  </div>
+  </div> -->
 </div>
 </div>
 <div class="text-grey-dark mt-6 text-black" id="hea" >
   Already have an account? 
-  <a class="no-underline border-b border-blue text-red-600" t  href="">
+  <a class="no-underline border-b border-blue text-600" href="">
       Log in
   </a>
 </div>
@@ -98,7 +98,7 @@
   </form>
 
   <div class="alert alert-success" *ngIf="isSuccessful" id="suc-reg">
-    Your registration is successful! Please <a href="../login/" id="log"> Login In </a>
+    Your registration is successful! Please <a href="../login/" routerLink="home" id="log"> Login In </a>
   </div>
 
 

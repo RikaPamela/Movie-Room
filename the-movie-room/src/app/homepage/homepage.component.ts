@@ -9,6 +9,7 @@ import { Movie } from '../types/data-types';
 })
 export class HomepageComponent {
   movie: Movie[]= [];
+  filter: any;
 
   constructor(public productService: ProductService) {}
 
