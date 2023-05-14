@@ -19,12 +19,12 @@
   
 <div class="top">
 	<div class="columns">
-		<div class="column is-full featured_wrapper p-0">
+		<div class="p-0 column is-full featured_wrapper">
 			<img src="https://github.com/frontend-mastery-web/angular-movies-watch-list/blob/master/src/assets/background.jpg?raw=true" class="featured">
 			<div class="title_wrapper">
-				<span class="has-text-white">Trending Today</span>
+				<span class="has-text-white"></span>
 				<h1 class="title is-1 has-text-white">Discover your next favorite Movie in your own MovieRoom.</h1>
-				<!-- <button class="button is-medium" style="color:#BAFF39;">Watch It Now</button> -->
+				<button class="button is-medium" style="color:#BAFF39;" routerLink="/movies">Watch It Now</button>
 			</div>
 		</div>
 	</div>
@@ -32,13 +32,12 @@
 
 <!-- <app-movies></app-movies> -->
 
-<h1 class="header-h1">Your Movies</h1>
    
 </body>
 </html>
 <div class=""> 
   <!-- <div *ngFor="let movie of movie" class="no-margin"> -->
-   
+    <h1 class="header-h1">Your Movies</h1>
      <app-movies>[movie]='movie'</app-movies>
   <!-- </div>  -->
 </div>
