@@ -82,6 +82,9 @@
         <li class="mr-4">
           <a routerLink="/movies" class="text-white hover:text-gray-300 hover:no-underline">Movies</a>
         </li>
+        <li class="mr-4" *ngIf="isLoggedIn">
+          <a routerLink="/wishlist" class="text-white hover:text-gray-300 hover:no-underline">WishList</a>
+        </li>
         <div class="log" *ngIf="!isLoggedIn">
           <button type="button" class="mr-2 btn btn-color" routerLink="/login" >
           Sign In

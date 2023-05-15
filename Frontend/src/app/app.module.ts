@@ -20,6 +20,7 @@ import { MoviesComponent } from './movies/movies.component';
 import { BoardUserComponent } from './board-user/board-user.component';
 import { BoardModeratorComponent } from './board-moderator/board-moderator.component';
 import { FooterComponent } from './footer/footer.component';
+import { WishlistComponent } from './wishlist/wishlist.component';
 
 // import { RegisterComponent } from './register/register.component';
 // import { HttpClientModule } from '@angular/common/http';
@@ -43,6 +44,7 @@ import { FooterComponent } from './footer/footer.component';
     BoardModeratorComponent,
     RegisterComponent,
     FooterComponent,
+    WishlistComponent,
    ],
   imports: [
     BrowserModule,

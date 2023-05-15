@@ -9,6 +9,7 @@ import { WatchButtonComponent } from './watch-button/watch-button.component';
 // import { ReactiveFormComponent } from './Register_component/reactive-form/reactive-form.component';
 import { MoviesComponent } from './movies/movies.component';
 import { RegisterComponent } from './register/register.component';
+import { WishlistComponent } from './wishlist/wishlist.component';
 
 const routes: Routes = [
  
@@ -19,7 +20,8 @@ const routes: Routes = [
   {path: 'register', component: RegisterComponent},
 
   {path: 'profile', component: ProfileComponent},
-  {path: 'watch-button/:id', component: WatchButtonComponent}
+  {path: 'watch-button/:id', component: WatchButtonComponent},
+  {path:'wishlist' , component: WishlistComponent}
 
 ];
 

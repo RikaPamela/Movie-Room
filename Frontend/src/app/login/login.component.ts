@@ -40,9 +40,9 @@ username: any;
 
     this.authService.login(username, password).subscribe({
       next: (data) => {
+        localStorage.setItem('uid',data.id);
         this.tokenStorage.saveToken(data.accessToken);
         this.tokenStorage.saveUser(data);
-
         this.isLoginFailed = false;
         this.isLoggedIn = true;
         this.roles = this.tokenStorage.getUser().roles;
