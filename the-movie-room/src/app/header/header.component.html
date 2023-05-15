@@ -18,7 +18,7 @@
         </li> -->
 
       </ul>
-      <ul class="ml-auto text-white navbar-nav" *ngIf="isLoggedIn">
+      <!-- <ul class="ml-auto text-white navbar-nav" *ngIf="isLoggedIn">
         <li class="nav-item" id="flex-icon">
           <a href="/profile" class="nav-link" routerLink="profile"></a>
         </li>
@@ -27,7 +27,7 @@
           <a href class="nav-link" (click)="logout()">Sign Out</a>
         </li>
 
-      </ul>
+      </ul> -->
       
       <!-- <form class="my-2 form-inline my-lg-0">
         
@@ -57,7 +57,7 @@
         </li>  
         </li> -->
       </ul>
-    
+<!--     
       <ul class="flex items-center justify-end" *ngIf="isLoggedIn">
         <li class="flex items-center mr-4">
           <a href="/profile" class="text-white hover:text-gray-300">
@@ -70,22 +70,29 @@
         </li>
         
         
-        <!-- <li class="nav-item">
+        <li class="nav-item">
           <a href class="nav-link" (click)="logout()">Watch List</a>
-        </li> -->
-      </ul>
+        </li>
+      </ul> -->
       
       <form class="flex items-center justify-end">
         <li class="mr-4">
-          <a routerLink="/" class="text-white hover:text-gray-300 hover:no-underline">Home</a>
-        </li>
+          <!-- <a routerLink="/" class="text-white hover:text-gray-300 hover:no-underline">Home</a>
+        </li> -->
         <li class="mr-4">
           <a routerLink="/movies" class="text-white hover:text-gray-300 hover:no-underline">Movies</a>
         </li>
-        
-        <button type="button" class="mr-2 btn btn-color" routerLink="/login">
-          Signin
+        <div class="log" *ngIf="!isLoggedIn">
+          <button type="button" class="mr-2 btn btn-color" routerLink="/login" >
+          Sign In
         </button>
+        </div>
+        <div class="log" *ngIf="isLoggedIn">
+          <button type="button" class="mr-2 btn btn-color" (click)="logout()" routerLink="/home">
+          Sign Out
+        </button>
+        </div>
+        
         
          
         

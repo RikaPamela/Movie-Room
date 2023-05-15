@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductService } from '../Movies-Services/product.service';
 import { Movie } from '../types/data-types';
 import { Observable } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
+import { ProductService } from '../services/product.service';
 //youb have to import the cart services and function
 
 @Component({

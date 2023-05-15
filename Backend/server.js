@@ -1,5 +1,6 @@
 const express = require("express");
 const cors = require("cors");
+// require = ("dotenv").config();
 const dbConfig = require("./app/config/dbconfig")
 const app = express();
 
@@ -20,14 +21,24 @@ app.get("/", (req, res) => {
   res.json({ message: "Welcome to Movieroom" });
 });
 
+// const user = require ("./app/controllers/user.controller");
+// const movies = require ("./app/controllers/user.controller");
+
+
 require('./app/routes/auth.routes')(app);
 require('./app/routes/user.routes')(app);
 require("./app/routes/movie.routes")(app);
 
 // set port, listen for requests
-const PORT = process.env.PORT || 8081;
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}.`);
+// const PORT = process.env.PORT || 8081;
+// app.listen(PORT, () => {
+//   console.log(`Server is running on port ${PORT}.`);
+// });
+
+//set port, listen for requests
+// const PORT = process.env.PORT || 8081;
+app.listen(8080, () => {
+  console.log(`Server is running on port ${8080}.`);
 });
 
 const db = require("./app/models");
@@ -82,3 +93,42 @@ db.mongoose
       }
     });
   }
+
+
+
+
+
+
+
+  
+
+
+// const express = require("express");
+// const cors = require("cors");
+// // require = ("dotenv").config(path,'./app/config/dbconfig');
+// const dbConfig = require("./app/config/dbconfig")
+// const app = express();
+
+
+// // const auth = require("./app/routes/auth.routes");
+// const movie = require("./app/routes/movie.routes");
+// // const user = require("./app/routes/user.routes");
+
+// const auth = require("./app/controllers/auth.controller");
+// // const movies = require("./app/controllers/movies.controller");
+// const user = require("./app/controllers/movies.controller");
+
+// var corsOptions = {
+//   origin: "*",
+// };
+
+// app.use(express.json());
+// app.use(cors(corsOptions));
+
+// app.listen(8080, () => {
+//   console.log("Server is running on port 8080.");
+// });
+
+// app.use('/auth', auth);
+// app.use("/movie", movie);
+// app.use('/user', user);

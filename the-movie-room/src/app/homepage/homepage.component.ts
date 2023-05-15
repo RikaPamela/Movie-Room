@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { ProductService } from '../Movies-Services/product.service';
 import { Movie } from '../types/data-types';
+import { ProductService } from '../services/product.service';
 
 @Component({
   selector: 'app-homepage',

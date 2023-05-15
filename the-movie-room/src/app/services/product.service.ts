@@ -40,7 +40,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ProductService {
-  baseUrl = 'http://localhost:8081/api';
+  baseUrl = 'http://localhost:8080/api';
 
 
   constructor(private http: HttpClient) { }
