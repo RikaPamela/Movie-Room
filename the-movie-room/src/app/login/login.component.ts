@@ -1,6 +1,10 @@
 import { Component } from '@angular/core';
-import { AuthService } from 'src/services/auth.service';
-import { TokenStorageService } from 'src/services/token-storage.service';
+// import { AuthService } from 'src/services/auth.service';
+import { AuthService } from '../../services/auth.service';
+
+// import { TokenStorageService } from 'src/services/token-storage.service';
+import { TokenStorageService } from '../../services/token-storage.service';
+
 
 
 

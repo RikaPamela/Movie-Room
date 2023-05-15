@@ -18,7 +18,7 @@ export interface Movie{
     release_date: Number,
     duration: Number,
     Ratings: Number,
-    youtube_url: String,
+    trailer: String,
     image_url: String,
     background_url: String
 }

@@ -35,7 +35,10 @@
       </p>
       <div class="btnLinks">
         <button>Add to watchlist</button>
-        <button>WATCH TRAILER</button>
+        <a [href]="movie.trailer" target="_blank">Watch Trailer</a>
+        <!-- <button (click)="openYoutube()" routerLink="">Trailer {{ movie.trailer }}</button> -->
+
+        
       </div>
     </div>
    

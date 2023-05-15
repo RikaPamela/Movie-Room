@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ProductService } from '../services/product.service';
+import { ProductService } from '../Movies-Services/product.service';
 import { Movie } from '../types/data-types';
 
 @Component({
