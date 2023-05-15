@@ -29,20 +29,24 @@
       <span class="minutes">Runtime: {{ movie.duration }} min</span>
       <p class="type">Genre: {{movie.genre}}</p>
       <p class="type">Director: {{movie.director}}</p>
-      <!-- <p class="type">Actor: {{movie.actors}}</p> -->
+      
 
     </div>
     <div class="movie_desc">
+      <!-- <p class="type">Cast: {{movie.actors}}</p> -->
+
       <p class="text">
-        {{ movie.description }}
+        Description: {{ movie.description }}
       </p>
       <div class="btnLinks">
         <!-- <button>Add to watchlist</button> -->
+
         <button>
         <a [href]="movie.trailer" target="_blank">Watch Trailer</a>
         <!-- <button (click)="openYoutube()" routerLink="">Trailer {{ movie.trailer }}</button> -->
         </button>
-    
+        
+
       </div>
     </div>
    
