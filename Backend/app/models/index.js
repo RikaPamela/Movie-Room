@@ -12,5 +12,6 @@ db.ROLES = ["user", "admin", "moderator"];
 
 //movies App
 db.movies = require("./movie.model.js")(mongoose);
+db.wishlist = require('./wishlist.model')(mongoose);
 
 module.exports = db;

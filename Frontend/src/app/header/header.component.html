@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg" >
 
-    <a class="navbar-brand" routerLink="/home"> TheMovie<span class="brand-color">Room</span></a>
+    <a class="navbar-brand" routerLink="/home"> Movie<span class="brand-color">Room</span></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" >
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -82,16 +82,20 @@
         <li class="mr-4">
           <a routerLink="/movies" class="text-white hover:text-gray-300 hover:no-underline">Movies</a>
         </li>
-        <li class="mr-4" *ngIf="isLoggedIn">
-          <a routerLink="/wishlist" class="text-white hover:text-gray-300 hover:no-underline">WishList</a>
+
+        <li class="mr-4" class="log" *ngIf="isLoggedIn">
+          <a routerLink="/wishlist" class="text-white hover:text-gray-300 hover:no-underline"> Watchlist</a>
         </li>
+        
         <div class="log" *ngIf="!isLoggedIn">
           <button type="button" class="mr-2 btn btn-color" routerLink="/login" >
           Sign In
         </button>
+        
         </div>
+
         <div class="log" *ngIf="isLoggedIn">
-          <button type="button" class="mr-2 btn btn-color" (click)="logout()" routerLink="/home">
+          <button type="button" class="mr-2 btn btn-color" style="margin-left: 15px;" (click)="logout()" routerLink="/home">
           Sign Out
         </button>
         </div>

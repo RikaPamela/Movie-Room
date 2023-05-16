@@ -53,6 +53,7 @@ export class WishlistComponent {
   removeFromCard() {
     if (this.product) {
       this.wishlistService.removeWishlist(this.movies);
+      console.log("helllllll")
     }
   }
 
