@@ -1,0 +1,79 @@
+/* You can add global styles to this file, and also import other style files */
+//@import "~bootstrap/dist/css/bootstrap.css";
+
+//tailwind styles
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+//global styles
+.media {
+  background-color: #000000;
+  color: rgb(255, 255, 255);
+  // margin-top: 150px;
+}
+
+.title {
+  font-size: 60px;
+  font-weight: 800;
+}
+
+.card-text {
+  font-size: 23px;
+}
+
+.card-genre {
+  font-size: 19px;
+  color: rgb(170, 255, 0);
+}
+
+.year {
+  font-size: 19px;
+  color: rgb(170, 255, 0);
+}
+
+.outer-div {
+  background-color: black;
+  /* height: 100vh;  */
+}
+
+.mr-3 {
+  /* margin-top: 100px; */
+  align-items: center;
+  width: 300px;
+  height: 400px;
+}
+
+.outer-div {
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJqZbONinpa9lb_JEpkR_DLa9eaRBFtg_jIg&usqp=CAU');
+  background-size: cover;
+  /* background-position: center; */
+
+  /* padding: 50px;
+  margin: 0 auto;
+  max-width: 800px; */
+}
+
+
+/* .outer-div {
+  background-color: #111;
+  color: #fff;
+}
+
+h5.title {
+  color: #f3f3f3;
+}
+
+p.year {
+  color: #ddd;
+}
+
+button {
+  background-color: #f1c40f;
+  color: #333;
+} */
+
+
+/* .watch-images {
+    text-align: center;
+} */

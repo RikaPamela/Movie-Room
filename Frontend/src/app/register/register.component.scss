@@ -1,0 +1,35 @@
+#hea{
+    text-align: center;
+}
+
+* {
+    /* background-image: url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fG1vdmllJTIwYXBwc3xlbnwwfHwwfHw%3D&w=1000&q=80"); */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+form{
+    margin-top: 5rem;
+}
+
+
+#suc-reg{
+    margin-top: 15rem;
+    text-align: center;
+    justify-content: center;
+}
+
+#log{
+    color: red;
+}
+
+.text-600 {
+    color: blue;
+}
+
+.btn,  {
+    background-color: #BAFF39;
+
+}

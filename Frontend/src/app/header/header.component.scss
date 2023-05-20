@@ -1,0 +1,43 @@
+//header styles
+
+
+.navbar {
+  background-color: black;
+}
+
+
+
+.navbar-brand {
+    font-size: 35px;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.brand-color {
+    color: #BAFF39;
+    /* color: red; */
+    /* color: #2272FF; */
+}
+
+img {
+    margin-right: 7px;
+    width: 40px;
+    height: 30px;
+}
+
+.btn-color {
+    /* border-radius: 30px; */
+    background-color: #BAFF39;
+    /* background-color: red; */
+    color: black;
+    border: 1px solid black;
+}
+
+.form-inline .form-control {
+    margin-left: 10px;
+}
+button:hover{
+    transform: scale(1.1);
+    transition: 0.3s ease-in-out;
+}

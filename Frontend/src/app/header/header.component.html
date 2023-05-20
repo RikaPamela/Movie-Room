@@ -1,0 +1,132 @@
+<nav class="navbar navbar-expand-lg" >
+
+    <a class="navbar-brand" routerLink="/home"> Movie<span class="brand-color">Room</span></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="ml-auto navbar-nav">
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="#" style="color: orange;">Movies</a>
+        </li> -->
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="#" style="color: orange;">Genres</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" style="color: orange;">Upcoming</a>
+        </li> -->
+
+      </ul>
+      <!-- <ul class="ml-auto text-white navbar-nav" *ngIf="isLoggedIn">
+        <li class="nav-item" id="flex-icon">
+          <a href="/profile" class="nav-link" routerLink="profile"></a>
+        </li>
+
+        <li class="nav-item">
+          <a href class="nav-link" (click)="logout()">Sign Out</a>
+        </li>
+
+      </ul> -->
+      
+      <!-- <form class="my-2 form-inline my-lg-0">
+        
+        <button button type="button"  class="btn btn-color" routerLink="/login">
+            Signup 
+        </button>
+        <i class="fa fa-user-o"></i> 
+        <input class="form-control mr-sm-2" type="search" placeholder="Search by movie title" aria-label="Search">
+
+      </form> -->
+    </div>
+
+
+    
+
+
+
+    
+
+   <!--Tailwind conversion of the above code-->
+   <!--DO NOT DELETE-->
+
+    <div class="flex-grow">
+      <ul class="flex items-center justify-end">
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="#" style="color: orange;">Popular</a>
+        </li>  
+        </li> -->
+      </ul>
+<!--     
+      <ul class="flex items-center justify-end" *ngIf="isLoggedIn">
+        <li class="flex items-center mr-4">
+          <a href="/profile" class="text-white hover:text-gray-300">
+            <i class="fa fa-user-o"></i>
+          </a>
+        </li>
+    
+        <li class="mr-4">
+          <a href class="text-white hover:text-gray-300" (click)="logout()">Sign Out</a>
+        </li>
+        
+        
+        <li class="nav-item">
+          <a href class="nav-link" (click)="logout()">Watch List</a>
+        </li>
+      </ul> -->
+      
+      <form class="flex items-center justify-end">
+        <li class="mr-4">
+          <!-- <a routerLink="/" class="text-white hover:text-gray-300 hover:no-underline">Home</a>
+        </li> -->
+        <li class="mr-4">
+          <a routerLink="/movies" class="text-white hover:text-gray-300 hover:no-underline">Movies</a>
+        </li>
+
+        <li class="mr-4" class="log" *ngIf="isLoggedIn">
+          <a routerLink="/wishlist" class="text-white hover:text-gray-300 hover:no-underline"> Watchlist</a>
+        </li>
+        
+        <div class="log" *ngIf="!isLoggedIn">
+          <button type="button" class="mr-2 btn btn-color" routerLink="/login" >
+          Sign In
+        </button>
+        
+        </div>
+
+        <div class="log" *ngIf="isLoggedIn">
+          <button type="button" class="mr-2 btn btn-color" style="margin-left: 15px;" (click)="logout()" routerLink="/home">
+          Sign Out
+        </button>
+        </div>
+        
+        
+         
+        
+        <!-- <button type="button" class="mr-2 btn btn-color" *ngIf="isLoggedIn" (click)="logout()">
+          Sign Out
+        </button> -->
+        <!-- <i class="fa fa-user-o"></i> -->
+        <!-- <input class="w-1/3 px-4 py-2 mr-4 rounded-lg shadow-md form-input" type="search" placeholder="Search by movie title" aria-label="Search"> -->
+
+      </form>
+    </div>
+    
+</nav>
+
+
+
+
+
+
+ 
+
+  
+
+
+
+
+  
+
+ 
+  
