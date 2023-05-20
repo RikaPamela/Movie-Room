@@ -1,5 +1,14 @@
 
+
 <div class="container-fluid">
+  <div class="container">
+    <div class="button-container">
+      <button class="movie-button" (click)="onLatestClick()">Latest</button>
+      <!-- <button class="movie-button" (click)="onPopularClick()">Popular</button>
+      <button class="movie-button" (click)="onUpcomingClick()">Upcoming</button> -->
+    </div>
+  </div>
+
   <div class="grid card">
     <div class="row">
       <div class="col-sm-3" *ngFor="let movie of movies ; let index = index">
@@ -12,7 +21,7 @@
               <small class="text-muted">{{ movie.release_date }}</small>
             </div>
             <div class="btn-group">
-                <button type="button"  class="btn btn-sm btn-outline-secondary" (click)="gotoM(index)">View
+                <button type="button" class="btn btn-sm btn-outline-secondary" (click)="gotoM(index)">View
                 </button>
             </div>
             </div>

@@ -26,11 +26,12 @@
 
 .card-img-top:hover {
   transform: scale(1.1);
-  transition: 0.3s ease-in-out;  
+  transition: 0.5s ease-in-out;  
 }
 
 .btn {
-  background-color: #BAFF39;
+  /* background-color: #BAFF39; */
+  background-color: #fff;
   color: black;
 	transition: 0.3s ease-in-out;
 
@@ -55,4 +56,48 @@
 }
 
 
+/* .movie {
+  margin-bottom: 50px;
+  padding: 10px;
+  color: black;
+  background-color: white;
+} */
+.container {
+  text-align: center;
+}
 
+.button-container {
+  display: inline-block;
+  margin-bottom: 30px;
+}
+
+.movie-button {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.search-bar {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 250px;
+  margin-right: 10px;
+}
+
+.search-button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}

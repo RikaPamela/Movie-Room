@@ -44,6 +44,14 @@ export class MoviesComponent implements OnInit {
         });
   }
 
+  //filter buttons - Event handler for the "Latest" button
+  onLatestClick(): void {
+    this.movieService.filterAll('latest').subscribe((movies: any[]) => {
+      // Handle the retrieved movies
+      console.log('Latest movies:', movies);
+    });
+  }
+
   refreshList(): void {
     this.retrieveMovies();
     this.currentMovie = null;

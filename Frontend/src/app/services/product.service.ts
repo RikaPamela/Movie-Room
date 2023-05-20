@@ -48,7 +48,25 @@ export class ProductService {
   //getting All Movies
   getAll(): Observable<any> {
     return this.http.get(`${this.baseUrl}/movies`);
+    
   }
+
+  //filter
+  filterAll(filter: string):Observable<any> {
+    let url = `${this.baseUrl}/movies`;
+
+    // Add filter parameter to the URL based on the selected criterion
+    if (filter === 'latest') {
+      url += '?orderBy=release_date&sortOrder=desc&limit=10';
+    } else if (filter === 'upcoming') {
+      url += '?orderBy=release_date&sortOrder=asc&limit=10';
+    } else if (filter === 'popular') {
+      url += '?orderBy=ratings&sortOrder=desc&limit=10';
+    }
+
+    return this.http.get<any[]>(url);
+  }
+  
   
   //getting movie by id
   get(id: any): Observable<any> {

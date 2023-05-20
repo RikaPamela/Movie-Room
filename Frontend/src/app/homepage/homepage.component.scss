@@ -6,6 +6,10 @@
   padding: 10px;
 } */
 
+.top {
+	overflow: hidden;
+}
+
 //Homepage scss
 .jumbotron {
   background-color: black;
@@ -92,6 +96,7 @@ img {
 }
 
 .title_wrapper {
+	/* margin-bottom: 100px; */
 	position: absolute;
 	width: 100%;
 	left: 2rem;

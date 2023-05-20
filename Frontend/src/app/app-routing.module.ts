@@ -5,8 +5,6 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { LoginComponent } from './login/login.component';
 import { ProfileComponent } from './profile/profile.component';
 import { WatchButtonComponent } from './watch-button/watch-button.component';
-//import { ProductComponent } from './product-card/product-card.component';
-// import { ReactiveFormComponent } from './Register_component/reactive-form/reactive-form.component';
 import { MoviesComponent } from './movies/movies.component';
 import { RegisterComponent } from './register/register.component';
 import { WishlistComponent } from './wishlist/wishlist.component';

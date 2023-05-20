@@ -12,7 +12,6 @@ import { ProfileComponent } from './profile/profile.component';
 
 //import { FormsModule } from '@angular/forms';
 import { WatchButtonComponent } from './watch-button/watch-button.component';
-// import { ReactiveFormComponent } from './Register_component/reactive-form/reactive-form.component';
  import {HttpClient, HttpClientModule} from '@angular/common/http';
 import { BoardAdminComponent } from './board-admin/board-admin.component';
 
@@ -22,8 +21,6 @@ import { BoardModeratorComponent } from './board-moderator/board-moderator.compo
 import { FooterComponent } from './footer/footer.component';
 import { WishlistComponent } from './wishlist/wishlist.component';
 
-// import { RegisterComponent } from './register/register.component';
-// import { HttpClientModule } from '@angular/common/http';
 
 
 
