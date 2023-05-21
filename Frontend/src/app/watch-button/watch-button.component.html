@@ -1,21 +1,4 @@
 
-<!-- <div *ngIf="movie"> -->
-  <!-- <div class="outer-div" >
-    <img class="card-img-top" class="watch-images"  class="mr-3" [src]="movie.image_url" alt="{{ movie.title }}">
-    <div class="media-body">
-      <h5 class="title" for="card-title" >{{ movie.title }}</h5>
-      <h6 class="card-text">{{ movie.description }}</h6>
-      <p class="card-genre">Genre {{movie.genre}}</p>
-      <p class="card-duration">Duration {{ movie.duration }} mins</p>
-      <p class="year">Director {{ movie.directors }}</p>
-      <p class="year">Ratings {{ movie.Ratings }}</p>
-      <p class="year">Trailer {{ movie.youtube_url }}</p>
-      <p class="year">Cast {{ movie.cast }}</p>
-
-      <button style="background-color: rgb(182, 255, 36); color: black;">Watch Later</button>
-    </div>
-</div> -->
-
 <!--CARD-->
 
 <div class="movie_card" id="bright">
@@ -23,14 +6,12 @@
     <div class="movie_header">
       <img class="locandina" [src]="movie.image_url" alt="{{ movie.title }}"/>
       <h1>{{ movie.title }}</h1>
-      <!-- <h1>{{ movie.title }}</h1> -->
 
-      <h4>{{movie.release_date}}</h4>
-      <span class="minutes">Runtime: {{ movie.duration }} min</span>
+      <h4>Year: {{movie.release_date}}</h4>
+      <span class="minutes">Duration: {{ movie.duration }} min</span>
       <p class="type">Genre: {{movie.genre}}</p>
       <p class="type">Director: {{movie.director}}</p>
       
-
     </div>
     <div class="movie_desc">
       <!-- <p class="type">Cast: {{movie.actors}}</p> -->
@@ -49,17 +30,14 @@
         <!-- <button> -->
           <!-- <a [href]="" target="_blank">Add to watch</a> -->
           <!-- <button (click)="openYoutube()" routerLink="">Trailer {{ movie.trailer }}</button> -->
-          <!-- </button> -->
-        
-
+        <!-- </button> -->
       </div>
     </div>
-   
-
   </div>
+  
   <div class="blur_back bright_back"></div>
 </div>
 
-<!-- <app-footer></app-footer> -->
+
 
 

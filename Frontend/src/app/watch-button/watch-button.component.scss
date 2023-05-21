@@ -203,21 +203,28 @@ html, body{
 
 .bright_back{
   background: url("https://static.vecteezy.com/system/resources/previews/001/254/680/original/cinema-background-concept-vector.jpg");
+
+  /* background: url("Movie-Room/Frontend/src/assets/cinema-background-concept-vector.jpg"); */
 }
 
 .btnLinks button {
   padding: 10px;
   margin-top: 10px;
   margin-right: 15px;
-  background-color: #BAFF39;;
-  color: black;
-  border: 2px solid black;
+  background-color: rgb(34,193,195);
+  ;;
+  color: white;
+  border: 2px solid white;
   text-decoration: none;
 }
 
-.btnLinks button 
+.btnLinks button a {
+  text-decoration: none;
+
+}
 
 .btnLinks button:hover {
+  /* color: green; */
   transform: scale(1.1);
   transition: 0.3s ease-in-out;
 }
