@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ProductService } from '../services/product.service';
+import { Movie } from '../types/data-types';
 
 @Component({
   selector: 'app-movies',
@@ -9,7 +10,10 @@ import { ProductService } from '../services/product.service';
 })
 export class MoviesComponent implements OnInit {
 
-  movies: any;
+  // movies: any;
+  movies: any[] = [];
+  // movies: Movie[] = [];
+
   currentMovie = null;
   currentIndex = -1;
   title = '';
@@ -23,7 +27,7 @@ export class MoviesComponent implements OnInit {
   
   getMovie() {
     if (this.movies) {
-      this.movieService.get(this.movies?.id);
+      this.movieService.get(this.movies);
     }
   }
 
@@ -32,7 +36,7 @@ export class MoviesComponent implements OnInit {
    return this.router.navigate(["watch-button",this.movies[index]._id])
   }
 
-
+  //Getting the movies
   retrieveMovies(): void {
     this.movieService.getAll().subscribe(
         data => {
@@ -46,9 +50,27 @@ export class MoviesComponent implements OnInit {
 
   //filter buttons - Event handler for the "Latest" button
   onLatestClick(): void {
-    this.movieService.filterAll('latest').subscribe((movies: any[]) => {
-      // Handle the retrieved movies
-      console.log('Latest movies:', movies);
+    this.movieService.filterAll('latest').subscribe((movies: any) => {
+      this.movies = movies;
+      console.log('latest movies:', movies);
+    });
+
+  }
+
+
+  // Event handler for the "Popular" button
+  onPopularClick(): void {
+    this.movieService.filterAll('popular').subscribe((movies: any) => {
+      this.movies = movies;
+      console.log('popular movies:', movies);
+
+    });
+  }
+
+  // Event handler for the "Upcoming" button
+  onUpcomingClick(): void {
+    this.movieService.filterAll('upcoming').subscribe((movies: any) => {
+      this.movies = movies;
     });
   }
 

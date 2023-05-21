@@ -34,7 +34,12 @@ getMovie():Observable<movie[]>{
 
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable } from 'rxjs/internal/Observable';
+import { Movie } from '../types/data-types';
+
+// import { Observable } from 'rxjs';
+
+
 
 @Injectable({
   providedIn: 'root'
@@ -64,7 +69,7 @@ export class ProductService {
       url += '?orderBy=ratings&sortOrder=desc&limit=10';
     }
 
-    return this.http.get<any[]>(url);
+    return this.http.get(url);
   }
   
   
@@ -92,4 +97,7 @@ export class ProductService {
   findByTitle(title: any): Observable<any> {
     return this.http.get(`${this.baseUrl}/movies?title=${title}`);
   }
+
+
+
 }

@@ -8,16 +8,18 @@
 
 
 .navbar-brand {
-    font-size: 35px;
+    font-size: 38px;
     color: white;
-    font-weight: 500;
+    font-weight: 800;
     cursor: pointer;
 }
 
 .brand-color {
-    color: #BAFF39;
+    /* color: #BAFF39; */
+    color:rgb(34,193,195);
     /* color: red; */
-    /* color: #2272FF; */
+    /* color: #B6E1E7; blue */
+    /* color: #0C1A1A */
 }
 
 img {
@@ -28,9 +30,13 @@ img {
 
 .btn-color {
     /* border-radius: 30px; */
-    background-color: #BAFF39;
+    /* background-color: #BAFF39; */
+    /* background-color: #FF5841; */
+    background: rgb(34,193,195);
+    /* background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%); */
+
     /* background-color: red; */
-    color: black;
+    color: #f;
     border: 1px solid black;
 }
 
