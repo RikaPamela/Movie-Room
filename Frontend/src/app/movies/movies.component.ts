@@ -13,10 +13,10 @@ export class MoviesComponent implements OnInit {
   // movies: any;
   movies: any[] = [];
   // movies: Movie[] = [];
-
   currentMovie = null;
   currentIndex = -1;
   title = '';
+  searchQuery: any;
 
   constructor(private movieService: ProductService , private router:Router) { }
 
@@ -96,16 +96,33 @@ export class MoviesComponent implements OnInit {
           console.log(error);
         });
   }
+  
+  searchMovies() {
+    this.movieService.findByTitle(this.searchQuery).subscribe(
+      (response: any) => {
+        // Handle the search results
+        this.movies = response.movies; // Assuming you have a movies array property in the component to store the search results
+        console.log('Search query:', this.searchQuery);
 
-  searchTitle(): void {
-    this.movieService.findByTitle(this.title)
-      .subscribe(
-        data => {
-          this.movies = data;
-          console.log(data);
-        },
-        error => {
-          console.log(error);
-        });
+      },
+      (error: any) => {
+        // Handle error
+        console.log(error);
+      }
+    );
   }
+
+  
+
+  // searchTitle(): void {
+  //   this.movieService.findByTitle(this.title)
+  //     .subscribe(
+  //       data => {
+  //         this.movies = data;
+  //         console.log(data);
+  //       },
+  //       error => {
+  //         console.log(error);
+  //       });
+  // }
 }

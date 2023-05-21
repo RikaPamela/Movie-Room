@@ -94,10 +94,12 @@ export class ProductService {
     return this.http.delete(`${this.baseUrl}/movies`);
   }
 
+  // findByTitle(title: any): Observable<any> {
+  //   return this.http.get(`${this.baseUrl}/movies?title=${title}`);
+  // }
+
   findByTitle(title: any): Observable<any> {
-    return this.http.get(`${this.baseUrl}/movies?title=${title}`);
+    return this.http.get<Movie[]>(`${this.baseUrl}/movies?title=${title}`);
   }
-
-
-
+  
 }
