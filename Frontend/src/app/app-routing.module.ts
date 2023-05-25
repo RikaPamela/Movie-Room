@@ -8,6 +8,8 @@ import { WatchButtonComponent } from './watch-button/watch-button.component';
 import { MoviesComponent } from './movies/movies.component';
 import { RegisterComponent } from './register/register.component';
 import { WishlistComponent } from './wishlist/wishlist.component';
+import { AuthGuard } from './auth.guard';
+import { AddToWatchComponent } from './add-to-watch/add-to-watch.component';
 
 const routes: Routes = [
  
@@ -19,7 +21,8 @@ const routes: Routes = [
 
   {path: 'profile', component: ProfileComponent},
   {path: 'watch-button/:id', component: WatchButtonComponent},
-  {path:'wishlist' , component: WishlistComponent}
+  {path:'wishlist' , component: WishlistComponent},
+  {path:'addToWatchList' , component: AddToWatchComponent,canActivate :[AuthGuard ] }
 
 ];
 

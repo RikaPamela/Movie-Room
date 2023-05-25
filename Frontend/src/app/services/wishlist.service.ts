@@ -7,6 +7,9 @@ import { Movie } from '../types/data-types';
   providedIn: 'root'
 })
 export class WishlistService {
+  push(id: any) {
+    throw new Error('Method not implemented.');
+  }
   baseUrl = 'http://localhost:8080/api';
   wishlist: Movie[] =[];
 
@@ -44,4 +47,14 @@ export class WishlistService {
   findByTitle(title: any): Observable<any> {
     return this.http.get(`${this.baseUrl}/wishlists?title=${title}`);
   }
+
+  watchlistArray: Movie [] = [];
+   
+  addToWatchlist(watchlist: Movie) {
+    this.watchlistArray.push(watchlist)
+
+  }
+  removeFromCard(movieId: any) {
+    this.watchlistArray = this.watchlistArray.filter(movie => movie.id !== movieId)
+  } 
 }

@@ -1,0 +1,14 @@
+<div routerLink="/watchlist"
+  class="flex items-center gap-4 justify-between pl-1 pr-2 py-2 rounded-xl hover:bg-base-300 cursor-pointer"
+  (click)="removeFromCard()"
+>
+  <div class="card" style="width: 18rem;">
+    <img [src]="movie?.image_url" class="card-img-top" alt="...">
+    <div class="card-body">
+        <div class="text-[0.6rem] text-left">{{ movie.title }}</div>
+        <div class="text-[0.6rem] text-left">{{ movie.description }}</div>
+        <div class="font-bold text-right">{{ movie?.release_date }}</div>
+      <a href="#" class="btn btn-primary">Remove</a>
+    </div>
+   </div>
+</div>

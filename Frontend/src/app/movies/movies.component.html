@@ -7,20 +7,19 @@
       <button class="movie-button" (click)="onPopularClick()">Popular</button>
       <button class="movie-button" (click)="onUpcomingClick()">Upcoming</button> 
 
-      <!-- <form (ngSubmit)="searchMovies()">
-        <input type="text" class="search-bar" placeholder="Search..." [(ngModel)]="searchQuery">
-        <button type="submit" class="search-button">Search</button>
-      </form> -->
-      
-        <input type="text" class="search-bar" placeholder="Search..." [(ngModel)]="searchQuery">
-        <button class="search-button" (click)="searchMovies()">Search</button>
+       <!-- <app-searchbar></app-searchbar> -->
+       <!-- <form class="d-flex" role="search"> -->
+        <input class="form-control me-2" type="search" [(ngModel)]="searchTerm" (keyup.enter)="search($event)"  placeholder="Search Movies" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      <!-- </form> -->
     </div>
-
   </div>
 
   <div class="grid card">
     <div class="row">
-      <div class="col-sm-3" *ngFor="let movie of movies ; let index = index">
+      <!-- <div class="col-sm-3" *ngFor="let movie of movies ; let index = index"> -->
+           <div class="col-sm-3" *ngFor="let movie of movies let index =index">
+
         <div class="shadow-sm card mb-13">
           
           <img class="card-img-top"  [src]="movie.image_url" alt="{{ movie.title }}">
@@ -35,6 +34,11 @@
                 <button type="button" class="btn btn-sm btn-outline-secondary" (click)="gotoM(index)">View
                 </button>
             </div>
+            <app-add-to-watch></app-add-to-watch>
+            <!-- <div class="btn-group">
+              <button style="background-color: #BAFF39;"type="button" class="btn btn-sm btn-outline-secondary" (click)="addToWatchlist()">Add To Wishlist
+              </button>
+          </div> -->
             </div>
           </div>
         </div>

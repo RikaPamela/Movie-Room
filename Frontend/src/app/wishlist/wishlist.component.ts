@@ -19,7 +19,7 @@ export class WishlistComponent {
   uid = localStorage.getItem('uid')
 
   constructor(private movieService: ProductService , private router:Router,
-    private wishlistService: WishlistService) { }
+    public wishlistService: WishlistService) { }
 
   ngOnInit(): void {
     this.retrieveMovies();

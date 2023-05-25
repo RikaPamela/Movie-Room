@@ -9,6 +9,7 @@ export interface MovieRequest {
 
 
 export interface Movie{
+    id: any,
     title: String,
     description: String,
     cast: String,
@@ -23,3 +24,4 @@ export interface Movie{
     image_url: String,
     background_url: String
 }
+

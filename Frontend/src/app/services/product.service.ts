@@ -36,6 +36,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/internal/Observable';
 import { Movie } from '../types/data-types';
+import { BehaviorSubject, tap } from 'rxjs';
 
 // import { Observable } from 'rxjs';
 
@@ -55,6 +56,10 @@ export class ProductService {
     return this.http.get(`${this.baseUrl}/movies`);
     
   }
+
+  public productList = new BehaviorSubject<any>([]);
+  public search = new BehaviorSubject<string>("");
+  public searchPopular = new BehaviorSubject<string>("")
 
   //filter
   filterAll(filter: string):Observable<any> {
@@ -98,8 +103,9 @@ export class ProductService {
   //   return this.http.get(`${this.baseUrl}/movies?title=${title}`);
   // }
 
-  findByTitle(title: any): Observable<any> {
-    return this.http.get<Movie[]>(`${this.baseUrl}/movies?title=${title}`);
+  findByTitle(title: any): Observable<Movie[]> {
+    return this.http.get<Movie[]>(`${this.baseUrl}/movies?.title=${title}`);
   }
-  
+ 
+ 
 }
