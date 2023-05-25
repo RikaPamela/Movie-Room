@@ -3,14 +3,14 @@
 <div class="container-fluid">
   <div class="container">
     <div class="button-container">
-      <button class="movie-button" (click)="onLatestClick()">Latest</button>
+      <!-- <button class="movie-button" (click)="onLatestClick()">Latest</button>
       <button class="movie-button" (click)="onPopularClick()">Popular</button>
-      <button class="movie-button" (click)="onUpcomingClick()">Upcoming</button> 
+      <button class="movie-button" (click)="onUpcomingClick()">Upcoming</button>  -->
 
        <!-- <app-searchbar></app-searchbar> -->
        <!-- <form class="d-flex" role="search"> -->
         <input class="form-control me-2" type="search" [(ngModel)]="searchTerm" (keyup.enter)="search($event)"  placeholder="Search Movies" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
+        <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
       <!-- </form> -->
     </div>
   </div>
@@ -18,7 +18,7 @@
   <div class="grid card">
     <div class="row">
       <!-- <div class="col-sm-3" *ngFor="let movie of movies ; let index = index"> -->
-           <div class="col-sm-3" *ngFor="let movie of movies let index =index">
+           <div class="col-sm-3" *ngFor="let movie of movies; let index =index">
 
         <div class="shadow-sm card mb-13">
           
