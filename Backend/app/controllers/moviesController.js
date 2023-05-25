@@ -67,6 +67,23 @@ exports.findOne = (req, res) => {
     });
 };
 
+exports.findMovie = (req, res) => {
+  const title = req.query.title;
+  var condition = title ? { title: { $regex: new RegExp(title), $options: "i" } } : {};
+
+  Movie.find(condition)
+    .then(data => {
+      res.send(data);
+    })
+    .catch(err => {
+      res.status(500).send({
+        message:
+          err.message || "Some error occurred while retrieving movies."
+      });
+    });
+
+};
+
 // Update a Movie by the id in the request
 exports.update = (req, res) => {
     if (!req.body) {

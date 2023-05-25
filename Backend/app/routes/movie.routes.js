@@ -8,7 +8,8 @@ module.exports = app => {
   
     // Retrieve all moviess
     router.get("/", movies.findAll);
-  
+
+    router.get("/:title", movies.findMovie);
     // Retrieve all published moviess
     router.get("/published", movies.findAllPublished);
   
