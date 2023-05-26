@@ -24,6 +24,7 @@ import { CustomFilterPipePipe } from './custom-filter-pipe.pipe';
 import { CardItemComponent } from './card-item/card-item.component';
 import { AddToWatchComponent } from './add-to-watch/add-to-watch.component';
 import { AuthGuard } from './auth.guard';
+import { FilterPipe } from './shared/filter.pipe';
 
 
 
@@ -49,7 +50,8 @@ import { AuthGuard } from './auth.guard';
     WishlistComponent,
     CustomFilterPipePipe,
     CardItemComponent,
-    AddToWatchComponent
+    AddToWatchComponent,
+    FilterPipe
     
    ],
   imports: [

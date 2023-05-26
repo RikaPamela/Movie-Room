@@ -1,6 +1,6 @@
 
 <!--CARD-->
-<!-- 
+
 <div class="movie_card" id="bright">
   <div class="info_section">
     <div class="movie_header">
@@ -13,50 +13,31 @@
       <p class="type">Director: {{movie.director}}</p>
       
     </div>
-    <div class="movie_desc"> -->
+    <div class="movie_desc">
       <!-- <p class="type">Cast: {{movie.actors}}</p> -->
 
-      <!-- <p class="text">
+      <p class="text">
         Description: {{ movie.description }}
       </p>
-      <div class="btnLinks"> -->
+      <div class="btnLinks">
         <!-- <button>Add to watchlist</button> -->
 
-        <!-- <button>
-        <a [href]="movie.trailer" target="_blank">Watch Trailer</a> -->
+        <button>
+        <a [href]="movie.trailer" target="_blank">Watch Trailer</a>
         <!-- <button (click)="openYoutube()" routerLink="">Trailer {{ movie.trailer }}</button> -->
-        <!-- </button> -->
+        </button>
 
         <!-- <button> -->
           <!-- <a [href]="" target="_blank">Add to watch</a> -->
           <!-- <button (click)="openYoutube()" routerLink="">Trailer {{ movie.trailer }}</button> -->
         <!-- </button> -->
-      <!-- </div>
-
+      </div>
     </div>
   </div>
   
   <div class="blur_back bright_back"></div>
-</div> -->
-
-
-
-
-<div *ngIf="movie">
-  <div class="media" >
-    <img class="card-img-top"  class="mr-3" [src]="movie.image_url" alt="{{ movie.title }}">
-    <div class="media-body">
-      <h5 class="title" for="card-title" >{{ movie.title }}</h5>
-      <h6 class="card-text">{{ movie.description }}</h6>
-      <p class="card-genre">Genre: {{movie.genre}}</p>
-      <p class="card-duration">Duration: {{ movie.duration }} mins</p>
-      <p class="year">Year: {{ movie.release_date }}</p>
-      <button style="background-color: #BAFF39; color: black;" class="btn btn-outline-success" (click)="addToWatchlist"> 
-        <i class="bi bi-save2"></i>
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-save2" viewBox="0 0 16 16">
-          <path d="M2 1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H9.5a1 1 0 0 0-1 1v4.5h2a.5.5 0 0 1 .354.854l-2.5 2.5a.5.5 0 0 1-.708 0l-2.5-2.5A.5.5 0 0 1 5.5 6.5h2V2a2 2 0 0 1 2-2H14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h2.5a.5.5 0 0 1 0 1H2z"/>
-        </svg>
-        Add To My Watchlist</button>
-    </div>
-  </div>
 </div>
+
+
+
+

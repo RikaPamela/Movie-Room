@@ -18,6 +18,7 @@ export class MoviesComponent implements OnInit {
   title = '';
   searchQuery: string = '';
   searchKey: string = "";
+moviesFound: any;
 
   constructor(private movieService: ProductService, private router: Router,
     private watchlistService: WishlistService) { }
@@ -39,9 +40,9 @@ export class MoviesComponent implements OnInit {
   }
 
   //retrieve a single movie by index when the button watch is clicked
-  gotoM(index) {
-    return this.router.navigate(["watch-button", this.movies[index]._id])
-  }
+  gotoM(index){
+    return this.router.navigate(["watch-button",this.movies[index]._id])
+   }
 
   //Getting the movies
   retrieveMovies(): void {

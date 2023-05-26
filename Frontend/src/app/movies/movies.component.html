@@ -9,16 +9,22 @@
 
        <!-- <app-searchbar></app-searchbar> -->
        <!-- <form class="d-flex" role="search"> -->
-        <input class="form-control me-2" type="search" [(ngModel)]="searchTerm" (keyup.enter)="search($event)"  placeholder="Search Movies" aria-label="Search">
+        <!-- <input class="form-control me-2" type="search" [(ngModel)]="searchTerm" (keyup.enter)="search($event)"  placeholder="Search Movies" aria-label="Search"> -->
         <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
       <!-- </form> -->
+
+       <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" [(ngModel)]="searchTerm" (keyup)="search($event)" placeholder="Search for a movie" aria-label="Search">
+        <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
+      </form>
+      <div class="moviesNotFound"  *ngIf="searchTerm && moviesFound">No movie found.</div>
     </div>
   </div>
 
   <div class="grid card">
     <div class="row">
       <!-- <div class="col-sm-3" *ngFor="let movie of movies ; let index = index"> -->
-           <div class="col-sm-3" *ngFor="let movie of movies; let index =index">
+           <div class="col-sm-3" *ngFor="let movie of movies | filter:searchKey:'title'; let index = index">
 
         <div class="shadow-sm card mb-13">
           
@@ -33,12 +39,14 @@
             <div class="btn-group">
                 <button type="button" class="btn btn-sm btn-outline-secondary" (click)="gotoM(index)">View
                 </button>
+                <div class="mx-1"></div>
+                <app-add-to-watch class="btn btn-sm btn-outline-secondary"></app-add-to-watch>
             </div>
-            <app-add-to-watch></app-add-to-watch>
+           
             <!-- <div class="btn-group">
               <button style="background-color: #BAFF39;"type="button" class="btn btn-sm btn-outline-secondary" (click)="addToWatchlist()">Add To Wishlist
               </button>
-          </div> -->
+            </div>  -->
             </div>
           </div>
         </div>

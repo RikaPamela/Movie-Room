@@ -36,7 +36,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/internal/Observable';
 import { Movie } from '../types/data-types';
-import { BehaviorSubject, tap } from 'rxjs';
+import { BehaviorSubject, map, tap } from 'rxjs';
 
 // import { Observable } from 'rxjs';
 
@@ -107,5 +107,17 @@ export class ProductService {
     return this.http.get<Movie[]>(`${this.baseUrl}/movies?.title=${title}`);
   }
  
+
+  searchMovie(searchQuery: string): Observable<Array<Movie>> {
+    return this.http.get(`${this.baseUrl}/movies?title=${searchQuery}`)
+      .pipe(
+        map((response: any) => response.Search)
+      );
+  }
+
+  // Method for searchbar //
+  searchMovies(searchTerm: string) {
+    this.search.next(searchTerm);
+  }
  
 }
