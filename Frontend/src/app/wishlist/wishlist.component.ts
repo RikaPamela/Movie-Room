@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ProductService } from '../services/product.service';
 import { Movie } from '../types/data-types';
@@ -9,7 +9,7 @@ import { WishlistService } from '../services/wishlist.service';
   templateUrl: './wishlist.component.html',
   styleUrls: ['./wishlist.component.scss']
 })
-export class WishlistComponent {
+export class WishlistComponent implements OnInit {
   watchlist: Movie[] =[];
 
   movies: any;
@@ -23,6 +23,7 @@ export class WishlistComponent {
 
   ngOnInit(): void {
     // this.retrieveMovies();
+
     this.watchlist = this.wishlistService.getWatchlist();
     console.log(this.uid)
   }
@@ -45,66 +46,5 @@ export class WishlistComponent {
     this.cartProducts = this.cartProducts.filter(product => product.id !== productId)
   }
 } */
-
-// @Input() product?: Movie;
-
-  
-
-  // removeFromCard() {
-  //   if (this.product) {
-  //     this.wishlistService.removeWishlist(this.movies);
-  //     console.log("helllllll")
-  //   }
-  // }
-
-
-  // retrieveMovies(): void {
-  //   this.movieService.getAll().subscribe(
-  //       data => {
-  //         this.movies = data;
-  //         console.log(data);
-  //       },
-  //       error => {
-  //         console.log(error);
-  //       });
-  // }
-
-  // refreshList(): void {
-  //   this.retrieveMovies();
-  //   this.currentMovie = null;
-  //   this.currentIndex = -1;
-  // }
-
-  // setActiveMovie(movie: any, index: number): void {
-  //   this.currentMovie = movie;
-  //   this.currentIndex = index;
-  // }
-
-  // removeAllMovies(): void {
-  //   this.movieService.deleteAll()
-  //     .subscribe(
-  //       response => {
-  //         console.log(response);
-  //         this.retrieveMovies();
-  //       },
-  //       error => {
-  //         console.log(error);
-  //       });
-  // }
-
-  // searchTitle(): void {
-  //   this.movieService.findByTitle(this.title)
-  //     .subscribe(
-  //       data => {
-
-  //         if(data)
-
-
-  //         this.movies = data;
-  //         console.log(data);
-  //       },
-  //       error => {
-  //         console.log(error);
-  //       });
-  // }
+ 
 } 

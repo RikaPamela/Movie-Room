@@ -57,3 +57,37 @@
   width: 20px;
   height: 40px;
 }
+
+.watchlist-h1 {
+  padding-bottom: 20px;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.brand-color {
+  color:rgb(34,193,195);
+
+}
+
+.empty-watchlist-container {
+  position: relative;
+  text-align: center;
+}
+
+.empty-watchlist-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+  /* color: white; */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.empty-watchlist-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}

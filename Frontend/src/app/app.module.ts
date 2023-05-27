@@ -52,6 +52,7 @@ import { FilterPipe } from './shared/filter.pipe';
     CardItemComponent,
     AddToWatchComponent,
     FilterPipe
+
     
    ],
   imports: [
@@ -59,7 +60,8 @@ import { FilterPipe } from './shared/filter.pipe';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    
     
   ],
   providers: [AuthGuard],
