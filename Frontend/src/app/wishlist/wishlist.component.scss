@@ -19,7 +19,7 @@
     } */
 
 .card-img-top {
-  cursor: pointer;
+  /* cursor: pointer; */
   width: 320px;
   height: 400px;
 }
@@ -30,8 +30,8 @@
 }
 
 .btn {
-  background-color: #baff39;
-  color: black;
+  background-color: rgb(34,193,195);
+  color: white;
   transition: 0.3s ease-in-out;
 }
 
