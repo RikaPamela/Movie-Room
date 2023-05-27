@@ -17,4 +17,8 @@ export class CardItemComponent {
       this.watchList.removeFromCard(this.movie?.id);
     }
   }
+
+  ngOnInit() {
+    console.log('Movie in CardItemComponent:', this.movie);
+  }
 }

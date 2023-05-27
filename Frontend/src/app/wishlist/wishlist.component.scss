@@ -1,12 +1,12 @@
 * {
-    background-color: black;
-    color: white;
-  }
-  
-  .card {
-    border: 2px solid black;
-  }
-  /* card {
+  background-color: black;
+  color: white;
+}
+
+.card {
+  border: 2px solid black;
+}
+/* card {
       padding: 70px;
     }
     
@@ -17,39 +17,43 @@
     .card-text {
       font-size: 14px;
     } */
-  
-  .card-img-top {
-    cursor: pointer;
-    width: 320px;
-    height: 400px;
-  }
-  
-  .card-img-top:hover {
-    transform: scale(1.1);
-    transition: 0.3s ease-in-out;  
-  }
-  
-  .btn {
-    background-color: #BAFF39;
-    color: black;
-      transition: 0.3s ease-in-out;
-  
-  }
-  
-  .btn:hover {
-    transform: scale(1.1);
-    transition: 0.3s ease-in-out;
-  }
-  
-  .nav-item a {
-    color: red;
-  }
-  
-  .genre {
-    font-size:13px;
-  }
-  
-  .title {
-    font-size: 18px;
-    font-weight: 400;
-  }
+
+.card-img-top {
+  cursor: pointer;
+  width: 320px;
+  height: 400px;
+}
+
+.card-img-top:hover {
+  transform: scale(1.1);
+  transition: 0.3s ease-in-out;
+}
+
+.btn {
+  background-color: #baff39;
+  color: black;
+  transition: 0.3s ease-in-out;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  transition: 0.3s ease-in-out;
+}
+
+.nav-item a {
+  color: red;
+}
+
+.genre {
+  font-size: 13px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.img-card {
+  width: 20px;
+  height: 40px;
+}

@@ -13,8 +13,8 @@ export class WishlistComponent {
   wishlist: Movie[] =[];
 
   movies: any;
-  currentMovie = null;
-  currentIndex = -1;
+  // currentMovie = null;
+  // currentIndex = -1;
   title = '';
   uid = localStorage.getItem('uid')
 
@@ -22,7 +22,7 @@ export class WishlistComponent {
     public wishlistService: WishlistService) { }
 
   ngOnInit(): void {
-    this.retrieveMovies();
+    // this.retrieveMovies();
 
     console.log(this.uid)
   }
@@ -46,68 +46,65 @@ export class WishlistComponent {
   }
 } */
 
-@Input() product?: Movie;
+// @Input() product?: Movie;
 
   
 
-  removeFromCard() {
-    if (this.product) {
-      this.wishlistService.removeWishlist(this.movies);
-      console.log("helllllll")
-    }
-  }
+  // removeFromCard() {
+  //   if (this.product) {
+  //     this.wishlistService.removeWishlist(this.movies);
+  //     console.log("helllllll")
+  //   }
+  // }
 
 
-  retrieveMovies(): void {
-    this.movieService.getAll().subscribe(
-        data => {
-          this.movies = data;
-          console.log(data);
-        },
-        error => {
-          console.log(error);
-        });
-  }
+  // retrieveMovies(): void {
+  //   this.movieService.getAll().subscribe(
+  //       data => {
+  //         this.movies = data;
+  //         console.log(data);
+  //       },
+  //       error => {
+  //         console.log(error);
+  //       });
+  // }
 
-  refreshList(): void {
-    this.retrieveMovies();
-    this.currentMovie = null;
-    this.currentIndex = -1;
-  }
+  // refreshList(): void {
+  //   this.retrieveMovies();
+  //   this.currentMovie = null;
+  //   this.currentIndex = -1;
+  // }
 
-  setActiveMovie(movie: any, index: number): void {
-    this.currentMovie = movie;
-    this.currentIndex = index;
-  }
+  // setActiveMovie(movie: any, index: number): void {
+  //   this.currentMovie = movie;
+  //   this.currentIndex = index;
+  // }
 
-  removeAllMovies(): void {
-    this.movieService.deleteAll()
-      .subscribe(
-        response => {
-          console.log(response);
-          this.retrieveMovies();
-        },
-        error => {
-          console.log(error);
-        });
-  }
+  // removeAllMovies(): void {
+  //   this.movieService.deleteAll()
+  //     .subscribe(
+  //       response => {
+  //         console.log(response);
+  //         this.retrieveMovies();
+  //       },
+  //       error => {
+  //         console.log(error);
+  //       });
+  // }
 
-  searchTitle(): void {
-    this.movieService.findByTitle(this.title)
-      .subscribe(
-        data => {
+  // searchTitle(): void {
+  //   this.movieService.findByTitle(this.title)
+  //     .subscribe(
+  //       data => {
 
-          if(data)
-
-
-          this.movies = data;
-          console.log(data);
-        },
-        error => {
-          console.log(error);
-        });
-  }
+  //         if(data)
 
 
-
-}
+  //         this.movies = data;
+  //         console.log(data);
+  //       },
+  //       error => {
+  //         console.log(error);
+  //       });
+  // }
+} 

@@ -13,23 +13,32 @@ export class MoviesComponent implements OnInit {
   @Input() movie?: Movie
   movies: any[] = [];
   searchTerm !: string;
-  currentMovie = null;
-  currentIndex = -1;
+  // currentMovie = null;
+  // currentIndex = -1;
   title = '';
   searchQuery: string = '';
   searchKey: string = "";
-moviesFound: any;
+  moviesFound: any;
 
   constructor(private movieService: ProductService, private router: Router,
-    private watchlistService: WishlistService) { }
+  private watchlistService: WishlistService) { }
+
+  condition: any;
+  addToWatchlist() {
+    // if (this.condition === false) {
+    //   console.log('please login first.')
+    // }
+    this.watchlistService.addToWatchlist(this.movie)
+    // this.router.navigate(['wishlist'])
+  }
 
   ngOnInit(): void {
+    //display the movies in the view
     this.retrieveMovies();
+
     this.movieService.search.subscribe((val: any) => {
       this.searchKey = val;
     })
-    //  this.onPopularClick();
-    //  this.onLatestClick();
   }
 
 
@@ -56,67 +65,37 @@ moviesFound: any;
       });
   }
 
-  //filter buttons - Event handler for the "Latest" button
-  onLatestClick(): void {
-    this.movieService.filterAll('latest').subscribe((movies: any) => {
-      this.movies = movies;
-      console.log('latest movies:', movies);
-    });
-
-  }
 
 
-  // Event handler for the "Popular" button
-  onPopularClick(): void {
-    this.movieService.filterAll('popular').subscribe((movies: any) => {
-      this.movies = movies;
-      console.log('popular movies:', movies);
+  // refreshList(): void {
+  //   this.retrieveMovies();
+  //   this.currentMovie = null;
+  //   this.currentIndex = -1;
+  // }
 
-    });
-  }
+  // setActiveMovie(movie: any, index: number): void {
+  //   this.currentMovie = movie;
+  //   this.currentIndex = index;
+  // }
 
-  // Event handler for the "Upcoming" button
-  onUpcomingClick(): void {
-    this.movieService.filterAll('upcoming').subscribe((movies: any) => {
-      this.movies = movies;
-      console.log('Upcoming movie:', movies)
-    });
-  }
-
-  refreshList(): void {
-    this.retrieveMovies();
-    this.currentMovie = null;
-    this.currentIndex = -1;
-  }
-
-  setActiveMovie(movie: any, index: number): void {
-    this.currentMovie = movie;
-    this.currentIndex = index;
-  }
-
-  removeAllMovies(): void {
-    this.movieService.deleteAll()
-      .subscribe(
-        response => {
-          console.log(response);
-          this.retrieveMovies();
-        },
-        error => {
-          console.log(error);
-        });
-  }
+  // removeAllMovies(): void {
+  //   this.movieService.deleteAll()
+  //     .subscribe(
+  //       response => {
+  //         console.log(response);
+  //         this.retrieveMovies();
+  //       },
+  //       error => {
+  //         console.log(error);
+  //       });
+  // }
 
   search(event: any) {
     this.searchTerm = (event.target as HTMLInputElement).value;
     console.log(this.searchTerm);
     this.movieService.search.next(this.searchTerm);
   }
-  condition: any;
-  addToWatchlist() {
-    if (this.condition === false) {
-      console.log('please login first.')
-    }
-    this.watchlistService.addToWatchlist(this.movie)
-    this.router.navigate(['wishlist'])
-  }
+
+  
+
 }

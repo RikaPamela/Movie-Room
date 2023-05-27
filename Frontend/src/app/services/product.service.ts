@@ -1,37 +1,3 @@
-/*import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs/internal/Observable';
-
-
-export interface movie{
-  title: String,
-  description: String,
-  genre: String,
-  release_date: Number,
-  duration: Number,
-  image_url: String, 
-}
-
-@Injectable({
-  providedIn: 'root'
-})
-export class ProductService {
-private baseurl = "http://localhost:8080/movies/${id}";
-
-  constructor(private http:HttpClient) { }
-
-getMovie():Observable<movie[]>{
-  return this.http.get<movie[]>(this.baseurl);
-
-}
-  // getAllProducts(): Observable<MovieRequest> {
-  //   return this.http.get<MovieRequest>('http://localhost:8080/movies/${id}');
-  // }
-
-}
-*/
-
-
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/internal/Observable';
@@ -61,21 +27,6 @@ export class ProductService {
   public search = new BehaviorSubject<string>("");
   public searchPopular = new BehaviorSubject<string>("")
 
-  //filter
-  filterAll(filter: string):Observable<any> {
-    let url = `${this.baseUrl}/movies`;
-
-    // Add filter parameter to the URL based on the selected criterion
-    if (filter === 'latest') {
-      url += '?orderBy=release_date&sortOrder=desc&limit=10';
-    } else if (filter === 'upcoming') {
-      url += '?orderBy=release_date&sortOrder=asc&limit=10';
-    } else if (filter === 'popular') {
-      url += '?orderBy=ratings&sortOrder=desc&limit=10';
-    }
-
-    return this.http.get(url);
-  }
   
   
   //getting movie by id
