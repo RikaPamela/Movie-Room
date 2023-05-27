@@ -40,6 +40,12 @@ export class WishlistService {
     }
   }
   
+  //clear all the movies
+  // clearWatchlist(): void {
+  //   this.watchlist = []; // Clear the watchlist array
+  //   this.saveWatchlistToSessionStorage(); // Save the updated watchlist to session storage
+  // }
+  
 
 
   getWatchlist(): Movie[] {

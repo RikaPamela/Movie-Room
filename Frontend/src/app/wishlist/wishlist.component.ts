@@ -70,6 +70,33 @@ export class WishlistComponent implements OnInit {
   });
 
   }
+
+  // clearWatchlist(): void {
+  //   this.wishlistService.clearWatchlist(); // Call the service method to clear the watchlist
+  //     // Prompt confirmation with SweetAlert popup
+  //     Swal.fire({
+  //       title: 'Are you sure?',
+  //       text: 'Do you want to remove all movies from your watchlist?',
+  //       icon: 'warning',
+  //       showCancelButton: true,
+  //       confirmButtonText: 'Yes',
+  //       cancelButtonText: 'Cancel'
+  //     }).then((result) => {
+  //       if (result.value) {
+  //         // User confirmed, remove all movies logic here
+    
+  //         // Display success SweetAlert popup
+  //         Swal.fire({
+  //           icon: 'success',
+  //           title: 'All Movies Removed',
+  //           text: 'All movies have been removed from your watchlist.',
+  //           timer: 2000, // Popup will automatically close after 2 seconds
+  //           showConfirmButton: false
+  //         });
+  //       }
+  //     });
+  //   }
+}
   
   /*removeFromWishlist() {
     if ()
@@ -77,4 +104,3 @@ export class WishlistComponent implements OnInit {
   }
 } */
  
-} 
