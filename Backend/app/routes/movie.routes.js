@@ -27,7 +27,7 @@ module.exports = app => {
     router.delete("/:id", movies.delete);
   
     // Delete all moviess
-    router.delete("/", movies.deleteAll);
+    // router.delete("/", movies.deleteAll);
   
     app.use('/api/movies', router);
 };

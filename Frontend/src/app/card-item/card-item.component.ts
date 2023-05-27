@@ -12,13 +12,9 @@ export class CardItemComponent {
 
   constructor(public watchList: WishlistService) {}
 
-  removeFromCard() {
-    if(this.movie){
-      this.watchList.removeFromCard(this.movie?.id);
-    }
-  }
-
-  ngOnInit() {
-    console.log('Movie in CardItemComponent:', this.movie);
-  }
+  // removeFromCard() {
+  //   if(this.movie){
+  //     this.watchList.removeFromCard(this.movie?.id);
+  //   }
+  // }
 }

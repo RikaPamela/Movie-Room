@@ -11,7 +11,8 @@ import { WishlistService } from '../services/wishlist.service';
 })
 export class MoviesComponent implements OnInit {
   @Input() movie?: Movie
-  movies: any[] = [];
+
+  movies: any[];
   searchTerm !: string;
   // currentMovie = null;
   // currentIndex = -1;
@@ -23,14 +24,18 @@ export class MoviesComponent implements OnInit {
   constructor(private movieService: ProductService, private router: Router,
   private watchlistService: WishlistService) { }
 
-  condition: any;
-  addToWatchlist() {
+  addToWatchlist(movie: Movie) {
+    this.watchlistService.addToWatchlist(movie); // Add the movie to the watchlist
+  }
+
+  // condition: any;
+  // addToWatchlist() {
     // if (this.condition === false) {
     //   console.log('please login first.')
     // }
-    this.watchlistService.addToWatchlist(this.movie)
+    // this.watchlistService.addToWatchlist(this.movie)
     // this.router.navigate(['wishlist'])
-  }
+  // }
 
   ngOnInit(): void {
     //display the movies in the view
@@ -49,9 +54,10 @@ export class MoviesComponent implements OnInit {
   }
 
   //retrieve a single movie by index when the button watch is clicked
+  //single movie card with movie descriptions & youtube trailer.
   gotoM(index){
     return this.router.navigate(["watch-button",this.movies[index]._id])
-   }
+  }
 
   //Getting the movies
   retrieveMovies(): void {

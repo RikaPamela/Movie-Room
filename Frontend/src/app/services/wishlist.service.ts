@@ -8,16 +8,28 @@ import { Movie } from '../types/data-types';
 })
 export class WishlistService {
 
-  watchlistArray: Movie [] = [];
+  // watchlistArray: Movie [] = [];
+
+  watchlist: Movie[] = [];
+
   constructor() {}
 
-  addToWatchlist(watchlist: Movie) {
-    this.watchlistArray.push(watchlist)
+  addToWatchlist(movie: Movie) {
+    this.watchlist.push(movie); // Add the movie to the watchlist
+  }
 
+
+  getWatchlist(): Movie[] {
+    return this.watchlist; // Retrieve the watchlist array
   }
   
+  // addToWatchlist(watchlist: Movie) {
+  //   this.watchlistArray.push(watchlist)
 
-  removeFromCard(movieId: any) {
-    this.watchlistArray = this.watchlistArray.filter(movie => movie.id !== movieId)
-  } 
+  // }
+  
+
+  // removeFromCard(movieId: any) {
+  //   this.watchlistArray = this.watchlistArray.filter(movie => movie.id !== movieId)
+  // } 
 }

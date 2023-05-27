@@ -134,20 +134,20 @@ exports.delete = (req, res) => {
 };
 
 // Delete all Movies from the database.
-exports.deleteAll = (req, res) => {
-    Movie.deleteMany({})
-    .then(data => {
-      res.send({
-        message: `${data.deletedCount} Movies were deleted successfully!`
-      });
-    })
-    .catch(err => {
-      res.status(500).send({
-        message:
-          err.message || "Some error occurred while removing all Movies."
-      });
-    });
-};
+// exports.deleteAll = (req, res) => {
+//     Movie.deleteMany({})
+//     .then(data => {
+//       res.send({
+//         message: `${data.deletedCount} Movies were deleted successfully!`
+//       });
+//     })
+//     .catch(err => {
+//       res.status(500).send({
+//         message:
+//           err.message || "Some error occurred while removing all Movies."
+//       });
+//     });
+// };
 
 // Find all published Movies
 exports.findAllPublished = (req, res) => {

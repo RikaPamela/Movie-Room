@@ -10,7 +10,7 @@ import { WishlistService } from '../services/wishlist.service';
   styleUrls: ['./wishlist.component.scss']
 })
 export class WishlistComponent {
-  wishlist: Movie[] =[];
+  watchlist: Movie[] =[];
 
   movies: any;
   // currentMovie = null;
@@ -23,7 +23,7 @@ export class WishlistComponent {
 
   ngOnInit(): void {
     // this.retrieveMovies();
-
+    this.watchlist = this.wishlistService.getWatchlist();
     console.log(this.uid)
   }
 
