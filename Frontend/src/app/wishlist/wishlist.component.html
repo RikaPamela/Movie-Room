@@ -63,7 +63,6 @@
 
 <h1 class="watchlist-h1">Your Watch<span class="brand-color">List</span></h1>
 <div class="container-fluid">
-<!-- <button type="button" class="btn btn-sm btn-danger" (click)="clearWatchlist()">Clear Watchlist</button> -->
   <div class="grid card">
     <div class="row">
       <div class="col-sm-3" *ngFor="let movie of watchlist">
@@ -86,10 +85,9 @@
         </div>
       </div>
     </div>
-  </div>
 </div>
 
 <div class="empty-watchlist-container" *ngIf="watchlist.length === 0">
   <p class="empty-watchlist-text">Your watchlist is empty. Please add movies to watch.</p>
-  <img class="empty-watchlist-image" src="https://media.istockphoto.com/id/1191001701/photo/popcorn-and-clapperboard.jpg?s=612x612&w=0&k=20&c=iUkFTVuU8k-UCcZDxczTWs6gkRa0nAMihp2Jf_2ASKM=" alt="Empty Watchlist Image">
+  <img class="empty-watchlist-image" src="https://media.istockphoto.com/id/1271522601/photo/pop-corn-and-on-red-armchair-cinema.jpg?s=612x612&w=0&k=20&c=XwQxmfrHb-OwV5onPUW5ApB4RaGBK7poSIzZj4q_N_g=" alt="Empty Watchlist Image">
 </div>
