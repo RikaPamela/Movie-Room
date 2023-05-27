@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 // import { HttpClient } from '@angular/common/http';
 // import { Observable } from 'rxjs';
 import { Movie } from '../types/data-types';
+import Swal from 'sweetalert2';
 
 @Injectable({
   providedIn: 'root'
@@ -19,6 +20,15 @@ export class WishlistService {
   addToWatchlist(movie: Movie) {
     this.watchlist.push(movie); // Add the movie to the watchlist
     this.saveWatchlistToSessionStorage(); // Save the updated watchlist to session storage
+
+    // Display SweetAlert popup
+    Swal.fire({
+      icon: 'success',
+      title: 'Movie Added',
+      text: 'The movie has been added to your watchlist.',
+      timer: 2000, // Popup will automatically close after 2 seconds
+      showConfirmButton: false
+    });
   }
 
 
