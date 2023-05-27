@@ -31,6 +31,16 @@ export class WishlistService {
     });
   }
 
+  //remove from the watchlist
+  removeFromWatchlist(movie: Movie): void {
+    const index = this.watchlist.indexOf(movie);
+    if (index > -1) {
+      this.watchlist.splice(index, 1); // Remove the movie from the watchlist
+      this.saveWatchlistToSessionStorage(); // Save the updated watchlist to session storage
+    }
+  }
+  
+
 
   getWatchlist(): Movie[] {
     return this.watchlist; // Retrieve the watchlist array
