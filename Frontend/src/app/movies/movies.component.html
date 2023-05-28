@@ -20,7 +20,11 @@
       </div>
       
       
-      <div class="moviesNotFound" *ngIf="searchTerm && !moviesFound">Ops! Not found.</div>
+      <div class="moviesNotFound" *ngIf="searchTerm && !moviesFound">Ops! Not found.
+        <!-- <script>
+          swal("No Movie Found", "Sorry, no movies were found.", "error");
+        </script> -->
+      </div>
     </div>
   </div>
 

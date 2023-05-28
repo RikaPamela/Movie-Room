@@ -21,7 +21,7 @@ export class MoviesComponent implements OnInit {
   title = '';
   searchQuery: string = '';
   searchKey: string = "";
-  moviesFound: any;
+  moviesFound: boolean;
   showNotFound: any;
  isLoggedIn: any;
 
@@ -96,6 +96,10 @@ export class MoviesComponent implements OnInit {
     this.searchTerm = (event.target as HTMLInputElement).value;
     console.log(this.searchTerm);
     this.movieService.search.next(this.searchTerm);
+
+    // if (!this.moviesFound) {
+    //   Swal.fire("No Movie Found", "Sorry, no movies were found.", "error");
+    // }
 
     // const searchedTitle = event.target.value;
     // const movieFound = this.movies.includes(searchedTitle);
