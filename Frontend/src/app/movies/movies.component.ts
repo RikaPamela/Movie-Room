@@ -20,6 +20,7 @@ export class MoviesComponent implements OnInit {
   searchQuery: string = '';
   searchKey: string = "";
   moviesFound: any;
+showNotFound: any;
 
   constructor(private movieService: ProductService, private router: Router,
   private watchlistService: WishlistService) { }
@@ -100,6 +101,10 @@ export class MoviesComponent implements OnInit {
     this.searchTerm = (event.target as HTMLInputElement).value;
     console.log(this.searchTerm);
     this.movieService.search.next(this.searchTerm);
+
+    // const searchedTitle = event.target.value;
+    // const movieFound = this.movies.includes(searchedTitle);
+    // this.showNotFound = !movieFound;
   }
 
   

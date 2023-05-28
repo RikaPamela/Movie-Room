@@ -18,6 +18,18 @@ export class WishlistService {
   }
 
   addToWatchlist(movie: Movie) {
+    const existingMovie = this.watchlist.find(m => m.title === movie.title);
+    if (existingMovie) {
+    // Movie already exists in the watchlist
+    Swal.fire({
+      icon: 'warning',
+      title: 'Movie Already Added',
+      text: 'The movie is already added to your watchlist.',
+      timer: 2000, // Popup will automatically close after 2 seconds
+      showConfirmButton: false
+    });
+    } else {
+
     this.watchlist.push(movie); // Add the movie to the watchlist
     this.saveWatchlistToSessionStorage(); // Save the updated watchlist to session storage
 
@@ -30,6 +42,7 @@ export class WishlistService {
       showConfirmButton: false
     });
   }
+}
 
   //remove from the watchlist
   removeFromWatchlist(movie: Movie): void {

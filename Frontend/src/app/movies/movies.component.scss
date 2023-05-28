@@ -124,6 +124,13 @@
     justify-content: center;
   }
 
+  .btn-group button.btn {
+    height: 45px;
+    line-height: 1;
+    padding: 4px 8px;
+    /* font-size: 12px; */
+  }
+
   .search-bar {
     margin-top: 18px; 
   }
@@ -143,5 +150,11 @@
 .search-button:hover{
   transform: scale(1.1);
   transition: 0.3s ease-in-out;
+}
+
+.searchInput {
+  font-size: 21px;
+  font-weight: 600;
+  color: white;
 }
 
