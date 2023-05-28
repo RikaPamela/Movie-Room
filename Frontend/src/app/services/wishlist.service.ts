@@ -1,6 +1,4 @@
 import { Injectable } from '@angular/core';
-// import { HttpClient } from '@angular/common/http';
-// import { Observable } from 'rxjs';
 import { Movie } from '../types/data-types';
 import Swal from 'sweetalert2';
 
@@ -9,75 +7,58 @@ import Swal from 'sweetalert2';
 })
 export class WishlistService {
   private watchlistKey = 'watchlist';
-  // watchlistArray: Movie [] = [];
-
   watchlist: Movie[] = [];
 
   constructor() {
-    this.loadWatchlistFromSessionStorage(); // Load watchlist from session storage on service initialization
+    this.loadWatchlistFromLocalStorage(); // Load watchlist from local storage on service initialization
   }
 
   addToWatchlist(movie: Movie) {
     const existingMovie = this.watchlist.find(m => m.title === movie.title);
     if (existingMovie) {
-    // Movie already exists in the watchlist
-    Swal.fire({
-      icon: 'warning',
-      title: 'Movie Already Added',
-      text: 'The movie is already added to your watchlist.',
-      timer: 1000, // Popup will automatically close after 2 seconds
-      showConfirmButton: false
-    });
+      // Movie already exists in the watchlist
+      Swal.fire({
+        icon: 'warning',
+        title: 'Movie Already Added',
+        text: 'The movie is already added to your watchlist.',
+        timer: 1000, // Popup will automatically close after 2 seconds
+        showConfirmButton: false
+      });
     } else {
+      this.watchlist.push(movie); // Add the movie to the watchlist
+      this.saveWatchlistToLocalStorage(); // Save the updated watchlist to local storage
 
-    this.watchlist.push(movie); // Add the movie to the watchlist
-    this.saveWatchlistToSessionStorage(); // Save the updated watchlist to session storage
-
-    // Display SweetAlert popup
-    Swal.fire({
-      icon: 'success',
-      title: 'Movie Added',
-      text: 'The movie has been added to your watchlist.',
-      timer: 1000, // Popup will automatically close after 2 seconds
-      showConfirmButton: false
-    });
+      // Display SweetAlert popup
+      Swal.fire({
+        icon: 'success',
+        title: 'Movie Added',
+        text: 'The movie has been added to your watchlist.',
+        timer: 1000, // Popup will automatically close after 2 seconds
+        showConfirmButton: false
+      });
+    }
   }
-}
 
-  //remove from the watchlist
   removeFromWatchlist(movie: Movie): void {
     const index = this.watchlist.indexOf(movie);
     if (index > -1) {
       this.watchlist.splice(index, 1); // Remove the movie from the watchlist
-      this.saveWatchlistToSessionStorage(); // Save the updated watchlist to session storage
+      this.saveWatchlistToLocalStorage(); // Save the updated watchlist to local storage
     }
   }
-  
-  //clear all the movies
-  // clearWatchlist(): void {
-  //   this.watchlist = []; // Clear the watchlist array
-  //   this.saveWatchlistToSessionStorage(); // Save the updated watchlist to session storage
-  // }
-  
-
 
   getWatchlist(): Movie[] {
     return this.watchlist; // Retrieve the watchlist array
   }
 
-  private saveWatchlistToSessionStorage(): void {
-    sessionStorage.setItem(this.watchlistKey, JSON.stringify(this.watchlist)); // Save watchlist to session storage
+  private saveWatchlistToLocalStorage(): void {
+    localStorage.setItem(this.watchlistKey, JSON.stringify(this.watchlist)); // Save watchlist to local storage
   }
 
-  private loadWatchlistFromSessionStorage(): void {
-    const storedWatchlist = sessionStorage.getItem(this.watchlistKey); // Retrieve watchlist from session storage
+  private loadWatchlistFromLocalStorage(): void {
+    const storedWatchlist = localStorage.getItem(this.watchlistKey); // Retrieve watchlist from local storage
     if (storedWatchlist) {
-      this.watchlist = JSON.parse(storedWatchlist); // Parse and assign watchlist if it exists in session storage
+      this.watchlist = JSON.parse(storedWatchlist); // Parse and assign watchlist if it exists in local storage
     }
   }
-  
-
-  // removeFromCard(movieId: any) {
-  //   this.watchlistArray = this.watchlistArray.filter(movie => movie.id !== movieId)
-  // } 
 }
