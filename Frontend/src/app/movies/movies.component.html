@@ -40,19 +40,15 @@
               <small class="text-muted">{{ movie.release_date }}</small>
             </div>
             <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-secondary" (click)="gotoM(index)">View
-                </button>
-                <div class="mx-2"></div>
-                
-                <button type="button" class="btn btn-sm btn-outline-secondary" (click)="addToWatchlist(movie)"><i class="fas fa-plus"></i>Add to Watch</button>
-
-                <!-- <div class="log" *ngIf="!isLoggedIn">
-                  <button type="button" class="mr-2 btn btn-color btn-custom" (click)="showSignInMessage()">
-                    Sign In
-                  </button>
-                </div> -->
-                
+              <button type="button" class="btn btn-sm btn-outline-secondary" (click)="gotoM(index)">
+                <i class="far fa-eye fa-inverse"></i> View
+              </button>
+              <div class="mx-2"></div>
+              <button type="button" class="btn btn-sm btn-outline-secondary" (click)="addToWatchlist(movie)">
+                <i class="fas fa-plus fa-inverse"></i> Add to Watch
+              </button>
             </div>
+            
             </div>
           </div>
         </div>
