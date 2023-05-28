@@ -25,10 +25,10 @@
         <!-- <button>Add to watchlist</button> -->
 
         <button>
-        <a [href]="movie.trailer" target="_blank">Watch Trailer</a>
+        <a [href]="movie.trailer" target="_blank" class="trailer-link"><i class="fas fa-play"></i><span class="button-text">Watch Trailer</span></a>
         <!-- <button (click)="openYoutube()" routerLink="">Trailer {{ movie.trailer }}</button> -->
         </button>
-
+        <button type="button" class="btn btn-sm btn-outline-secondary" (click)="addToWatchlist(movie)"><i class="fas fa-plus"></i><span class="button-text">Add to Watch</span></button>
         <!-- <button> -->
           <!-- <a [href]="" target="_blank">Add to watch</a> -->
           <!-- <button (click)="openYoutube()" routerLink="">Trailer {{ movie.trailer }}</button> -->

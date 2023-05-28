@@ -82,6 +82,8 @@ export class WishlistComponent implements OnInit {
   }
   
 }
+
+
   // clearWatchlist(): void {
   //   this.wishlistService.clearWatchlist(); // Call the service method to clear the watchlist
   //     // Prompt confirmation with SweetAlert popup
@@ -108,10 +110,4 @@ export class WishlistComponent implements OnInit {
   //     });
   //   }
 
-  
-  /*removeFromWishlist() {
-    if ()
-    this.cartProducts = this.cartProducts.filter(product => product.id !== productId)
-  }
-} */
  

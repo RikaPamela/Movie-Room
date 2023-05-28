@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { ProductService } from '../services/product.service';
+import { WishlistService } from '../services/wishlist.service';
 //youb have to import the cart services and function
 
 @Component({
@@ -18,7 +19,8 @@ export class WatchButtonComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private productService: ProductService,
-    private location: Location
+    private location: Location,
+    private watchlistService: WishlistService
     ){}
   
   ngOnInit(): void {
@@ -36,8 +38,12 @@ export class WatchButtonComponent implements OnInit {
       } );
   }
 
-  openYoutube() {
-    window.open('https://www.youtube.com/watch?v=4j0lrw6lim4E', '_blank');
+  // openYoutube() {
+  //   window.open('https://www.youtube.com/watch?v=4j0lrw6lim4E', '_blank');
+  // }
+
+  addToWatchlist(movie: Movie) {
+    this.watchlistService.addToWatchlist(movie); // Add the movie to the watchlist
   }
   
    
