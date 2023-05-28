@@ -40,13 +40,14 @@ https://github.com/RikaPamela/Movie-Room.git
 cd Movie-Room
 
 3. Install the required dependencies for the frontend and backend:
-   
-cd frontend
-npm install
-
-cd ../backend
-npm install
-
+   ```
+    cd frontend
+    npm install
+   ```
+   ```
+    cd ../backend
+    npm install
+   ```
 
 4. Set up the MongoDB database:
 
