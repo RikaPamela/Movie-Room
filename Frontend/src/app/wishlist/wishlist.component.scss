@@ -71,11 +71,11 @@
 
 }
 
-.empty-watchlist-container {
+/* .empty-watchlist-container {
   top: 30px;
   position: relative;
   text-align: center;
-}
+} */
 
 .empty-watchlist-text {
   position: absolute;
@@ -262,6 +262,7 @@
   width: 260px;
 }
 
-
-
-
+.wtc-btn:hover {
+  transform: scale(1.1);
+  transition: 0.3s ease-in-out;
+}

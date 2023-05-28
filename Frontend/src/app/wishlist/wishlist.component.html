@@ -89,7 +89,11 @@
   </div>
 
   <div class="empty-watchlist-container" *ngIf="watchlist.length === 0">
-    <p class="empty-watchlist-text">Oh no! Your watchlist is as dry as a desert!</p>
-    <img class="empty-watchlist-image" src="https://media.istockphoto.com/id/1271522601/photo/pop-corn-and-on-red-armchair-cinema.jpg?s=612x612&w=0&k=20&c=XwQxmfrHb-OwV5onPUW5ApB4RaGBK7poSIzZj4q_N_g=" alt="Empty Watchlist Image">
-  </div>
-</div>  
+    <img src="https://media.istockphoto.com/id/1255368735/photo/one-man-with-white-beard-sits-in-empty-cinema-or-theatre.jpg?s=170667a&w=0&k=20&c=Qnvw6Fu1ring4ZL9vCTHYnNBEJxtFDZtRM6EIw2HRsw=" alt="" style="display: block; margin: 0 auto; margin-top: 30px;">
+    <h1 style="font-size: 25px; font-weight: bold; text-align: center; margin-top: 10px;">
+        Your watchlist is empty!
+    </h1>
+    <!-- <p style="text-align: center;">Add your favourite movies to the watchlist</p> -->
+    <button class="wtc-btn" routerLink="/movies" style="display: block; margin: 0 auto; background-color:rgb(34, 193, 195); margin-top: 20px; border-radius: 5%; padding: 10px;"> Browse around!</button>
+</div>
+
