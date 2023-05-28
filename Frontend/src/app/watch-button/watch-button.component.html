@@ -5,19 +5,21 @@
   <div class="info_section">
     <div class="movie_header">
       <img class="locandina" [src]="movie.image_url" alt="{{ movie.title }}"/>
-      <h1>{{ movie.title }}</h1>
-
-      <h4>Year: {{movie.release_date}}</h4>
-      <span class="minutes">Duration: {{ movie.duration }} min</span>
-      <p class="type">Genre: {{movie.genre}}</p>
-      <p class="type">Director: {{movie.director}}</p>
+      <h1 class="movie-h1">{{ movie.title }}</h1>
+      
+      <h4><span class="movie-desc">Release Date: </span>{{movie.release_date}}</h4>
+      <span class="minutes"><span class="movie-desc">Duration: </span>{{ movie.duration }} mins</span>
+      <!-- <p class="type"><span class="movie-desc">Genre:</span> {{movie.genre}}</p> -->
+      <!-- <p class="type">Directors: {{movie.actors}}</p> -->
+      
+      <p><span class="movie-desc">Directors:</span> {{movie.director}}</p>
       
     </div>
     <div class="movie_desc">
       <!-- <p class="type">Cast: {{movie.actors}}</p> -->
 
       <p class="text">
-        Description: {{ movie.description }}
+        <span class="movie-desc">Description: </span> {{ movie.description }}
       </p>
       <div class="btnLinks">
         <!-- <button>Add to watchlist</button> -->

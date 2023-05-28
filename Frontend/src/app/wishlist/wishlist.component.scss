@@ -59,9 +59,10 @@
 }
 
 .watchlist-h1 {
-  padding-bottom: 20px;
+
+  padding-bottom: 25px;
   text-align: center;
-  font-size: 40px;
+  font-size: 35px;
   font-weight: 600;
 }
 
@@ -83,7 +84,7 @@
   transform: translate(-50%, -50%);
   font-size: 25px;
   color: white;
-  /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .empty-watchlist-image {
@@ -92,4 +93,175 @@
   height: auto;
   margin: 0 auto;
 }
+
+* {
+  background-color: black;
+  color: white;
+}
+
+.card {
+  border: 2px solid black;
+}
+/* card {
+    padding: 70px;
+  }
+  
+  .card-title {
+    font-size: 18px;
+  }
+  
+  .card-text {
+    font-size: 14px;
+  } */
+
+.card-img-top {
+  /* cursor: pointer; */
+  width: 320px;
+  height: 400px;
+}
+
+.card-img-top:hover {
+  transform: scale(1.1);
+  transition: 0.1s ease-in-out;  
+}
+
+.btn {
+  /* background-color: #BAFF39; */
+  background-color: rgb(34,193,195);
+  color: white;
+	transition: 0.3s ease-in-out;
+  padding: 5px 20px;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  transition: 0.3s ease-in-out;
+}
+
+.nav-item a {
+  color: red;
+}
+
+.genre {
+  font-size:13px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+
+/* .movie {
+  margin-bottom: 50px;
+  padding: 10px;
+  color: black;
+  background-color: white;
+} */
+.container {
+  text-align: center;
+}
+
+.button-container {
+  display: inline-block;
+  margin-bottom: 30px;
+}
+
+.movie-button {
+  display: inline-block;
+  margin: 10px;
+  padding: 5px 12px;
+  background-color: rgb(34,193,195);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.movie-button:hover{
+  transform: scale(1.1);
+  transition: 0.3s ease-in-out;
+}
+
+.search-bar {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 250px;
+  margin-left: 30px;
+}
+
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 767px) {
+  .col-sm-3 {
+    flex-basis: 50%;
+    max-width: 50%;
+  }
+  .card-img-top {
+    height: 200px; 
+    object-fit: cover;
+  }
+
+  .watchlist-h1 {
+    font-size: 25px;
+  }
+
+  .card-title {
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: scroll;
+    text-overflow: ellipsis;
+  }
+  .genre {
+    font-size: 12px;
+  }
+
+  .btn-group {
+    display: flex;
+    justify-content: center;
+  }
+
+  .btn-group button.btn {
+    height: 45px;
+    line-height: 1;
+    padding: 4px 8px;
+    /* font-size: 12px; */
+  }
+
+  .search-bar {
+    margin-top: 18px; 
+  }
+}
+
+.search-button {
+  padding: 10px 20px;
+  background-color: rgb(34,193,195);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 15px;
+}
+
+.search-button:hover{
+  transform: scale(1.1);
+  transition: 0.3s ease-in-out;
+}
+
+.searchInput {
+  font-size: 21px;
+  font-weight: 600;
+  color: white;
+}
+
+.custom-search {
+  width: 260px;
+}
+
+
+
 

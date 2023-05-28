@@ -18,10 +18,10 @@ export class AuthGuard implements CanActivate {
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
     this.isLoggedIn = this.loginComponent.onSubmit();
     if (!this.isLoggedIn) {
-    //   // window.alert('Please SignIn')
+      // window.alert('Please SignIn')
       console.log('please login')
-    // } else {
-    //   this.router.navigate(['aaddToWatchList']);
+    } else {
+      this.router.navigate(['addToWatchList']);
     }
     return false;
   }

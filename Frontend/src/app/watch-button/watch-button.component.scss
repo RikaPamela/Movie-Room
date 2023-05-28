@@ -107,7 +107,8 @@ html, body{
         position: relative;
         float: left;
         margin-right: 20px;
-        height: 120px;
+        height: 180px;
+        width: 130px;
         box-shadow: 0 0 20px -10px rgba(0,0,0,0.5);
       }
     }
@@ -207,7 +208,7 @@ html, body{
 
 
 .bright_back{
-  background: url("https://static.vecteezy.com/system/resources/previews/001/254/680/original/cinema-background-concept-vector.jpg");
+  background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7Ds9-v5s9JNTS7Bp9D8QEQq8mKvj5qLjhQw&usqp=CAU");
 
   /* background: url("Movie-Room/Frontend/src/assets/cinema-background-concept-vector.jpg"); */
 }
@@ -217,7 +218,6 @@ html, body{
   margin-top: 10px;
   margin-right: 15px;
   background-color: rgb(34,193,195);
-  ;;
   color: white;
   border: 2px solid white;
   text-decoration: none;
@@ -234,12 +234,19 @@ html, body{
   transition: 0.3s ease-in-out;
 }
 
+/* Movie Card Desc */
+.movie-h1 {
+  font-size: 40px;
+  font-weight: 800;
+  font-weight: bold;
+}
 
+.movie-desc {
+  font-size: 15px;
+  font-weight: 500;
+  font-weight: bold;
 
-
-
-
-
+}
 
 
 

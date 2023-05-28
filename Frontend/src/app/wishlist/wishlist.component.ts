@@ -43,11 +43,19 @@ export class WishlistComponent implements OnInit {
    return this.router.navigate(["watch-button",this.movies[index]._id])
   }
 
+  // Call the service method to remove the movie from the watchlist
   removeMovieFromWatchlist(movie: Movie): void {
-    this.wishlistService.removeFromWatchlist(movie); // Call the service method to remove the movie from the watchlist
-
-    // Prompt confirmation with SweetAlert popup
-    Swal.fire({
+    this.promptConfirmationDialog(movie)
+      .then((confirmed) => {
+        if (confirmed) {
+          this.removeFromWatchlist(movie);
+          this.showRemovalSuccessPopup();
+        }
+      });
+  }
+  
+  promptConfirmationDialog(movie: Movie): Promise<boolean> {
+    return Swal.fire({
       title: 'Are you sure?',
       text: 'Do you want to remove this movie from your watchlist?',
       icon: 'warning',
@@ -55,22 +63,25 @@ export class WishlistComponent implements OnInit {
       confirmButtonText: 'Yes',
       cancelButtonText: 'Cancel'
     }).then((result) => {
-      if (result.value) {
-        // User confirmed, remove the movie logic here
-
-        // Display success SweetAlert popup
-        Swal.fire({
-          icon: 'success',
-          title: 'Movie Removed',
-          text: 'The movie has been removed from your watchlist.',
-          timer: 2000, // Popup will automatically close after 2 seconds
-          showConfirmButton: false
-        });
-      }
-  });
-
+      return result.value;
+    });
   }
-
+  
+  removeFromWatchlist(movie: Movie): void {
+    this.wishlistService.removeFromWatchlist(movie);
+  }
+  
+  showRemovalSuccessPopup(): void {
+    Swal.fire({
+      icon: 'success',
+      title: 'Movie Removed',
+      text: 'The movie has been removed from your watchlist.',
+      timer: 1000, // Popup will automatically close after 2 seconds
+      showConfirmButton: false
+    });
+  }
+  
+}
   // clearWatchlist(): void {
   //   this.wishlistService.clearWatchlist(); // Call the service method to clear the watchlist
   //     // Prompt confirmation with SweetAlert popup
@@ -96,7 +107,7 @@ export class WishlistComponent implements OnInit {
   //       }
   //     });
   //   }
-}
+
   
   /*removeFromWishlist() {
     if ()

@@ -25,7 +25,7 @@ export class WishlistService {
       icon: 'warning',
       title: 'Movie Already Added',
       text: 'The movie is already added to your watchlist.',
-      timer: 2000, // Popup will automatically close after 2 seconds
+      timer: 1000, // Popup will automatically close after 2 seconds
       showConfirmButton: false
     });
     } else {
@@ -38,7 +38,7 @@ export class WishlistService {
       icon: 'success',
       title: 'Movie Added',
       text: 'The movie has been added to your watchlist.',
-      timer: 2000, // Popup will automatically close after 2 seconds
+      timer: 1000, // Popup will automatically close after 2 seconds
       showConfirmButton: false
     });
   }

@@ -3,6 +3,8 @@ import { Router } from '@angular/router';
 import { ProductService } from '../services/product.service';
 import { Movie } from '../types/data-types';
 import { WishlistService } from '../services/wishlist.service';
+import Swal from 'sweetalert2';
+import { AuthService } from 'src/services/auth.service';
 
 @Component({
   selector: 'app-movies',
@@ -20,23 +22,16 @@ export class MoviesComponent implements OnInit {
   searchQuery: string = '';
   searchKey: string = "";
   moviesFound: any;
-showNotFound: any;
+  showNotFound: any;
+ isLoggedIn: any;
 
   constructor(private movieService: ProductService, private router: Router,
-  private watchlistService: WishlistService) { }
+  private watchlistService: WishlistService, private authService: AuthService) { }
 
   addToWatchlist(movie: Movie) {
     this.watchlistService.addToWatchlist(movie); // Add the movie to the watchlist
   }
 
-  // condition: any;
-  // addToWatchlist() {
-    // if (this.condition === false) {
-    //   console.log('please login first.')
-    // }
-    // this.watchlistService.addToWatchlist(this.movie)
-    // this.router.navigate(['wishlist'])
-  // }
 
   ngOnInit(): void {
     //display the movies in the view
@@ -108,5 +103,28 @@ showNotFound: any;
   }
 
   
-
 }
+
+//display swal alert when user not signed in 
+  // showSignInMessage() {
+  //   Swal.fire({
+  //     title: 'Sign In or Register',
+  //     text: 'Please sign in or register to add to your watchlist.',
+  //     icon: 'info',
+  //     showCancelButton: true,
+  //     confirmButtonText: 'Sign In',
+  //     cancelButtonText: 'Register',
+  //     showCloseButton: true
+  //   }).then((result) => {
+  //     if (result.isConfirmed) {
+  //       // Redirect to sign in page
+  //       // Replace '/login' with the actual route for sign in page
+  //       this.router.navigateByUrl('/login');
+  //     } else if (result.dismiss === Swal.DismissReason.cancel) {
+  //       // Redirect to register page
+  //       // Replace '/register' with the actual route for register page
+  //       this.router.navigateByUrl('/register');
+  //     }
+  //   });
+
+  

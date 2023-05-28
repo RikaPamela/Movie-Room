@@ -13,6 +13,8 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class AuthService {
+  private isAuthenticated = false;
+
   _router: any;
 
   constructor(private http: HttpClient) { }
@@ -31,6 +33,5 @@ export class AuthService {
       password
     }, httpOptions);
   }
-
   
 }
