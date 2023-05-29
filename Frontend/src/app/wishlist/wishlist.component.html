@@ -60,9 +60,9 @@
     </div>
   </div>
 </div> -->
-
+<div id="all">
 <h1 class="watchlist-h1">Your Watch<span class="brand-color">List</span></h1>
-<div class="container-fluid">
+<div class="container-fluid" id="cont">
   <!-- <button type="button" class="btn btn-sm btn-outline-secondary" (click)="clearWatchlist()">Clear All</button> -->
   <div class="grid card">
     <div class="row">
@@ -88,7 +88,7 @@
     </div>
   </div>
 
-  <div class="empty-watchlist-container" *ngIf="watchlist.length === 0">
+  <div class="empty-watchlist-container" *ngIf="watchlist.length === 0" id="empCont">
     <img src="https://media.istockphoto.com/id/1255368735/photo/one-man-with-white-beard-sits-in-empty-cinema-or-theatre.jpg?s=170667a&w=0&k=20&c=Qnvw6Fu1ring4ZL9vCTHYnNBEJxtFDZtRM6EIw2HRsw=" alt="" style="display: block; margin: 0 auto; margin-top: 30px;">
     <h1 style="font-size: 25px; font-weight: bold; text-align: center; margin-top: 10px;">
         Your watchlist is empty!
@@ -97,3 +97,4 @@
     <button class="wtc-btn" routerLink="/movies" style="display: block; margin: 0 auto; background-color:rgb(34, 193, 195); margin-top: 20px; border-radius: 5%; padding: 10px;"> Browse around!</button>
 </div>
 
+</div>
