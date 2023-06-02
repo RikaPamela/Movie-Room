@@ -11,10 +11,11 @@ import { Movie } from '../types/data-types';
 })
 export class AddToWatchComponent {
   @Input() movie?: Movie
-
+//constructor containing all the services.
   constructor(private movieService: ProductService, private router: Router,
     private watchlistService: WishlistService) { }
 
+   //add to watchlist function 
   addToWatchlist() {
     this.watchlistService.addToWatchlist(this.movie)
   }

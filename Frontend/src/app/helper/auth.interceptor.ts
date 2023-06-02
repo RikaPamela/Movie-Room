@@ -12,6 +12,8 @@ const TOKEN_HEADER_KEY = 'x-access-token';
 export class AuthInterceptor implements HttpInterceptor {
   constructor(private token: TokenStorageService) { }
 
+  //This code appears to be implementing an interceptor for HTTP requests in an Angular application. 
+  //Interceptors allow you to intercept and modify HTTP requests or responses before they are sent or received by the server.
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     let authReq = req;
     const token = this.token.getToken();
@@ -21,6 +23,9 @@ export class AuthInterceptor implements HttpInterceptor {
     return next.handle(authReq);
   }
 }
+
+//This code exports an array named authInterceptorProviders that provides configuration for 
+//an interceptor in an Angular application.
 
 export const authInterceptorProviders = [
   { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }

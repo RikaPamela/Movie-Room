@@ -10,11 +10,14 @@ import { AuthService } from '../../services/auth.service';
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent implements OnInit{
+  //This code initializes a form object with two properties: username and password. 
+//The purpose of this code is to provide a template or model for a form that collects username and password inputs from a use
   form: any = {
     username: null,
     email: null,
     password: null
   };
+
   isSuccessful = false;
   isSignUpFailed = false;
   errorMessage = '';
@@ -24,6 +27,9 @@ export class RegisterComponent implements OnInit{
   ngOnInit(): void {
   }
 
+
+  //This code appears to be implementing an onSubmit method for a registration functionality in an Angular application. 
+  //The purpose of this code is to handle the form submission when a user tries to register or sign up.
   onSubmit(): void {
     const { username, email, password } = this.form;
 

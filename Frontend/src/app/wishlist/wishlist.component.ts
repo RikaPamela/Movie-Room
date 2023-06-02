@@ -53,7 +53,7 @@ export class WishlistComponent implements OnInit {
         }
       });
   }
-  
+  //prompt pop-up messages
   promptConfirmationDialog(movie: Movie): Promise<boolean> {
     return Swal.fire({
       title: 'Are you sure?',
@@ -67,10 +67,12 @@ export class WishlistComponent implements OnInit {
     });
   }
   
+  //removing a movie from a watch list
   removeFromWatchlist(movie: Movie): void {
     this.wishlistService.removeFromWatchlist(movie);
   }
   
+  //prompt pop-up message
   showRemovalSuccessPopup(): void {
     Swal.fire({
       icon: 'success',

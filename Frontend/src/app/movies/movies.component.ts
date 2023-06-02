@@ -92,6 +92,8 @@ export class MoviesComponent implements OnInit {
   //       });
   // }
 
+
+  //this code implements the search function for searching a movie
   search(event: any) {
     this.searchTerm = (event.target as HTMLInputElement).value;
     console.log(this.searchTerm);

@@ -15,6 +15,7 @@ export class HeaderComponent {
 
   constructor(private tokenStorageService: TokenStorageService) { }
 
+  //The purpose of this code is to check if a user is logged in and retrieve their role and username from the token storage service.
   ngOnInit(): void {
     this.isLoggedIn = !!this.tokenStorageService.getToken();
 
@@ -36,6 +37,8 @@ export class HeaderComponent {
   //   window.location.reload();
   // }
 
+  //This code appears to be implementing a logout method in an Angular application. 
+  //The purpose of this code is to log the user out of the application.
   logout(): void {
     this.isLoggedIn = true;
     this.tokenStorageService.signOut();

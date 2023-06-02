@@ -27,7 +27,7 @@ export class WatchButtonComponent implements OnInit {
     this.get_Movie();
   }
 
-  
+  //geting a movie by id
    get_Movie(): void {
     const id = (this.route.snapshot.paramMap.get('id'));
     console.log("this is an id :",id)
