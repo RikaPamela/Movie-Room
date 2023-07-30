@@ -13,7 +13,9 @@ import { BehaviorSubject, map, tap } from 'rxjs';
 })
 export class ProductService {
   //url for the backend to connect with the frontend
-  baseUrl = 'http://localhost:8080/api';
+  // baseUrl = 'http://localhost:8080/api';
+  baseUrl = 'https://backend-c9v5.onrender.com/api';
+
 
 
   constructor(private http: HttpClient) { }
